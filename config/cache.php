@@ -30,6 +30,10 @@ return [
 
     'stores' => [
 
+        'file' => [
+            'driver' => 'file',
+            'path'   => storage_path('framework/cache'), //缓存地址
+        ],
         'apc' => [
             'driver' => 'apc',
         ],

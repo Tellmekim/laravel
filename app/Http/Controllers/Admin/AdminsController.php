@@ -146,7 +146,7 @@ class AdminsController extends BaseController {
     public function loginHandle(AdminLoginRequest $request)
     {
         $result = $this->adminsService->login($request);
-
+        
         if ( !$result) {
             return viewError('登录失败', 'login');
         }
