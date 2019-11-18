@@ -21,7 +21,6 @@ class CreateGradeTable extends Migration
             $table->integer('updated_at')->default(0)->comment('修改时间');
             $table->integer('deleted_at')->default(0)->comment('删除时间');
         });
-        });
     }
 
     /**
