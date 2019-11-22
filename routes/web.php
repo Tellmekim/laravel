@@ -5,6 +5,9 @@
  */
  Route::get('','Home\IndexController@index')->name('index');  //前端首页
  Route::get('experience','Home\IndexController@experience')->name('experience');  //前端首页
+ Route::get('checkpoint','Home\IndexController@checkpoint')->name('checkpoint');  //列表页面
+ Route::get('success','Home\IndexController@success')->name('success');  //列表页面
+ Route::get('study','Home\IndexController@study')->name('study');  //列表页面
 /**后台模块**/
 Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
 
