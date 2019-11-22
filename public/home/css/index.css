@@ -1,0 +1,447 @@
+/*******Reset*******/
+
+@media screen and (min-device-width:1024px) {
+    /*body {
+        background: #cce8cf;
+    }*/
+}
+
+/*body {
+    background-color: #c7edcc;
+}*/
+
+html {
+    height: 100%;
+}
+
+body, div, h3, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+img, button {
+    border: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*body {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font: 14px/1.12 Arial,Helvetica,sans-serif;
+}*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+/***����***/
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.countdown {
+    float: left;
+    font-size: 14px;
+}
+
+.full {
+    float: right;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    background: url(/home/image/full.jpg) no-repeat;
+}
+
+.sy {
+    float: right;
+    width: auto;
+    margin-right: 0;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(/home/image/img52_1.png) no-repeat left center;
+    background-size: 42%;
+    font-family: "PingFang Regular";
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 50px;
+    color: #fff;
+    margin-right:50px;
+}
+
+    .sy:hover {
+        color: #3dc4e2;
+    }
+    .sy2 {
+    float: right;
+    width: 127px;
+    height: 40px;
+    cursor: pointer;
+    background: url(/home/image/fanyi.png) no-repeat;
+}
+
+#addlearing {
+    width: 100%;
+    height: auto;
+    min-height:30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-family: "PingFang Regular";
+    margin-top: 20px;
+}
+
+.small {
+    float: right;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    background: url(/home/image/small.jpg) no-repeat;
+}
+
+.s1, .s2 {
+    display: block;
+    margin: 0 auto;
+    top: 88px;
+    position: absolute;
+    z-index: 1;
+}
+
+.audioImg {
+    /*height:88px;*/
+    height: 0px;
+}
+
+    .audioImg img {
+        width: 100%;
+        height: 88px;
+    }
+
+#sound .audiojs {
+    background: none !important;
+}
+
+.audiojs {
+    height: 0 !important;
+}
+
+    .audiojs .scrubber {
+        margin: 0 !important;
+        height: 0 !important;
+    }
+
+.container {
+    width: 100%;
+    height:auto;
+    margin: 0 auto;
+    text-align: center;
+}
+/****ͼƬ���߿���ʽ****/
+.picture {
+    float: left;
+    /*width:41.2%;*/
+    width: 47%;
+    /*margin-top: 20px;*/
+    position: relative;
+    cursor: pointer;
+    padding: 5px;
+    /*padding-top:14px;*/
+    border: 3px solid transparent;
+    *border: 3px solid #fff;
+    margin-left: 2%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.picture img{
+    max-height:100%;
+}
+
+.hover {
+    border: 3px solid #C1C1C1;
+    border-radius: 16px;
+}
+
+.topSound {
+    /*position:relative;
+				height:80px;*/
+    /*background:url(../images/ts.png) repeat-x;
+				padding:7px 0;
+				top:-7px;
+				border-left: 8px solid #F2F2F2;
+				border-right: 7px solid #F2F2F2;*/
+}
+
+.picture .cImg {
+    /*height:300px;
+				background:#F2F2F2;
+				padding:7px;
+				margin-top:-7px;
+				border-radius:0 0 16px 16px;
+				border-radius:0 0 14px 14px;*/
+    border-radius: 14px 14px 14px 14px;
+    /*padding: 3px 5px 0 7px;*/
+    width: 100%;
+    height: auto;
+    margin-top: 0.6%;
+}
+
+.corner span {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+}
+
+.corner .hTopL {
+    background: url(/home/image/sprites.png) no-repeat 0 -135px;
+    left: -3px;
+    top: -3px;
+}
+
+.corner .hTopR {
+    background: url(/home/image/sprites.png) no-repeat -85px -135px;
+    right: -3px;
+    top: -3px;
+}
+
+.corner .hBottomL {
+    background: url(/home/image/sprites.png) no-repeat 0 -185px;
+    left: -3px;
+    bottom: -3px;
+}
+
+.corner .hBottomR {
+    background: url(/home/image/sprites.png) no-repeat -85px -185px;
+    right: -3px;
+    bottom: -3px;
+}
+
+.check {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 10;
+    /*top: 50%;*/
+    top: 39%;
+    left: 38%;
+}
+
+/***�ɼ����ǲ�***/
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #808080;
+    opacity: .5;
+    filter: Alpha(opacity=50);
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+
+#box {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.content {
+    position: relative;
+    /*min-width:300px;*/
+    padding-top: 5px;
+    margin: 0 auto;
+    background: #F2F2F2;
+    text-align: center;
+    z-index: 1000;
+    background: #8FBC8F;
+    border-radius: 15px;
+}
+
+    .content .tit, .content p, .content .btn {
+        margin: 5px 0 0px 0;
+    }
+
+    .content .tit, .content p {
+        font-size: 1.5em;
+    }
+
+    .content .score strong {
+        font-size: 1.5em;
+    }
+
+    .content .btn a {
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px 5px;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: black;
+        display: inline-block;
+    }
+    /*.content .Corret, .content .Wrong{
+			position:relative;
+			padding-left:30px;
+		}
+		.content .Corret span, .content .Wrong span{
+			position:absolute;
+			width:25px;
+			height:25px;
+			left:40%;
+			top:0;
+		}
+		.content .Corret span{
+			background:url(../images/r1.png) no-repeat left;
+		}*/
+    .content .Corret {
+        text-align: center;
+    }
+
+        .content .Corret a {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            color: black;
+            display: inline-block;
+            padding-left: 30px;
+        }
+
+    .content .Wrong span {
+        background: url(/home/image/no.png) no-repeat left;
+        background-size: 25px 25px;
+    }
+
+    .content .Corret .right {
+        background: url(/home/image/yes.png) no-repeat left;
+        background-size: 25px 25px;
+    }
+
+    .content .Corret .error {
+        background: url(/home/image/no.png) no-repeat left;
+        margin-left: 20px;
+        background-size: 25px 25px;
+    }
+
+    .content .Corret .errorCount {
+    }
+
+#msgpp {
+    display: none;
+    width: 1000px;
+    margin: 0 auto
+}
+
+.btn .restart {
+    /*background:url(../images/b1.png) no-repeat left;*/
+    background: url(/home/image/last.png) no-repeat left;
+    background-size: 30px 30px;
+}
+
+.btn .continue {
+    /*background:url(../images/b2.png) no-repeat left;*/
+    background: url(/home/image/next.png) no-repeat left;
+    background-size: 30px 30px;
+}
+
+.btn .back {
+    /*background:url(../images/b3.png) no-repeat left;*/
+    background: url(/home/image/for.png) no-repeat left;
+    background-size: 30px 30px;
+}
+
+
+/*****read******/
+.bgLeft strong {
+    position: absolute;
+    left: 10px;
+    /*padding-right:40px;*/
+    padding-right: 9%;
+}
+
+/*****write*****/
+.topSound .s1, .topSound .s2 {
+    top: 0;
+    margin-top: 7px;
+}
+
+.rePlay {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    z-index: 2;
+    right: 1.5%;
+    top: 40%;
+    background: url(/home/image/a1.png) no-repeat;
+    cursor: pointer;
+}
+
+    .rePlay:hover {
+        background-image: url(/home/image/a2.png) no-repeat;
+    }
+
+.bgLeft .playing {
+    background-image: url(/home/image/a3.png) no-repeat;
+}
+
+.bgLeft .rePlay {
+    top: 34%;
+    right: 2.5%;
+}
+
+.skip {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background: url(/home/image/skip0.png) no-repeat;
+}
+
+.bgLeft .userInput {
+    position: absolute;
+    left: 0;
+    width: 88%;
+    height: 64px;
+    line-height: 64px;
+    margin: 10px 0;
+    padding-left: 2%;
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 2em;
+    color: black;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 96.75%;
+}
