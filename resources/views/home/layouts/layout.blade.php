@@ -10,9 +10,9 @@
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/jquery.fullPage.css')}}">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/animate.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/reset.css')}}">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/common.css')}}">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/index2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/reset.css')}}">
     <script type="text/javascript" src="{{loadEdition('/home/js/jquery.min.js')}}"></script>
     <script type="text/javascript" src="{{loadEdition('/home/js/common.js')}}"></script>
     @yield('css')
@@ -91,15 +91,32 @@
             <li class="left">
                 <a href="https://www.bangyuanjiaoyu.com/login.aspx">闯关</a>
             </li>
-            <li class="right">
+            <li class="right"  style="display:none;">
                 <a href="https://www.bangyuanjiaoyu.com/register.aspx">注册</a>
             </li>
-            <li class="right">
+            <li class="right"  style="display:none;">
                 <a href="https://www.bangyuanjiaoyu.com/login.aspx">登录</a>
             </li>
-            <li class="right">
+            <li class="right user">
+                <div class="user_menu">
+                    <div class="user_tx">
+                        <img src="/home/image/img30.png"></div>
+                    <a href="" class="left quit">退出 <br>
+                        登录</a>
+                    <p style="margin-top:12px;">亲爱的&nbsp;<i>陈老师</i>&nbsp;同学<br>
+                    您的截止学习时间为：2021-06-303</p>
+                    <div class="clear"></div>
+                    <div class="ship">
+                        <a href="javascript:void(0)" class="a1 study_btn" data-id="253870" data-name="17688863703">学习</a>
+                        <a href="javascript:void(0)" class="a2">锟斤拷锟斤拷</a>
+                        <a href="javascript:void(0)" class="a3 qrcode_btn" data-id="253870">锟斤拷</a>
+                    </div>
+                </div>
+            </li>
+            <li class="right" >
                 <a href="https://www.bangyuanjiaoyu.com/enroll.aspx">我要报名</a>
             </li>
+           
         </ul>
 
     </header>
@@ -107,9 +124,9 @@
 </div>
 <div class="clear"></div>
 @yield('content')
+@yield('js')
  <p class="copyright">@ Copyright 2018广州邦元教育科技有限公司. All Rights Reserved.  粤ICP备17005305号</p>
 <script type="text/javascript" src="{{loadEdition('/home/js/wow.min.js')}}"></script>
-@yield('js')
 <script type="text/javascript">
 $(function(){
 	$('.sec1').css('height',$(window).height());
@@ -132,11 +149,9 @@ $('.after_log').hover(function() {
 	 });
 });
 </script>
-  @yield('footer-js')
     <script type="text/javascript" src="{{loadEdition('/Home/js/jquery.fullPage.min.js')}}"></script>
     <script type="text/javascript" src="{{loadEdition('/Home/js/wow.min.js')}}"></script>
     <script type="text/javascript" src="{{loadEdition('/Home/js/android.js')}}"></script>
-    @yield('js')
     <script type="text/javascript">
     $(function () {
         var height = parseInt($("body").height());
