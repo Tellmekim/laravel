@@ -4,27 +4,25 @@ namespace App\Http\Controllers\Admin;
 
 use App\Handlers\Tree;
 use App\Http\Requests\Admin\RoleRequest;
-use App\Models\RushThrough;
+use App\Models\Grade;
 use App\Repositories\RulesRepository;
 use Illuminate\Http\Request;
 
-class RushThroughController extends BaseController
+class GradeController extends BaseController
 {
 
-    
-    public function __construct(RushThrough $rushThrough)
+    public function __construct(Grade $Grade)
     {
-        $this->rushThrough = $rushThrough;
+        $this->Grade = $Grade;
     }
-
     /**
      * 展示所有闯关
      * @param RushThroughController 
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(RushThrough $rushThrough)
+    public function index(Grade $Grade)
     {
-        $roles = $this->rushThrough->paginate(10);
+       $roles = $this->Grade->paginate(10);
         return $this->view(null,compact('roles'));
     }
 

@@ -49,6 +49,8 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
         Route::resource('grade','GradeController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关年级
       
         Route::resource('star','StarController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关星球
+
+        Route::resource('set','SetController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//静态列表
       
     });
 

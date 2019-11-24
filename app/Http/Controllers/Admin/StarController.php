@@ -4,17 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Handlers\Tree;
 use App\Http\Requests\Admin\RoleRequest;
-use App\Models\RushThrough;
+use App\Models\Star;
 use App\Repositories\RulesRepository;
 use Illuminate\Http\Request;
 
-class RushThroughController extends BaseController
+class StarController extends BaseController
 {
 
-    
-    public function __construct(RushThrough $rushThrough)
+     public function __construct(Star $Star)
     {
-        $this->rushThrough = $rushThrough;
+        $this->Star = $Star;
     }
 
     /**
@@ -22,9 +21,10 @@ class RushThroughController extends BaseController
      * @param RushThroughController 
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(RushThrough $rushThrough)
+    public function index(Star $Star)
     {
-        $roles = $this->rushThrough->paginate(10);
+        $roles = $this->Star->paginate(10);
+
         return $this->view(null,compact('roles'));
     }
 

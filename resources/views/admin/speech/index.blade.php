@@ -3,17 +3,16 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="ibox-title">
-            <h5>闯关列表</h5>
+            <h5>词类闯关</h5>
         </div>
         <div class="ibox-content">
-            <a class="menuid btn btn-primary btn-sm" href="javascript:history.go(-1)">返回</a> &nbsp;
-            <a href="{{route('roles.create')}}" link-url="javascript:void(0)"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-plus-circle"></i> 添加关卡</button></a>
             <table class="table table-striped table-bordered table-hover m-t-md">
                 <thead>
                 <tr>
                     <th class="text-center" width="100">ID</th>
-                    <th>闯关名称</th>
-                    <th>闯关类型</th>
+                    <th>闯关ID</th>
+                    <th>词类名称</th>
+                    <th>完成度</th>
                     <th>闯关时间</th>
                     <th class="text-center" width="100">状态</th>
                     <th class="text-center" width="300">操作</th>
@@ -23,14 +22,9 @@
                 @foreach($roles as $key => $item)
                     <tr>
                         <td  class="text-center" >{{$item->id}}</td>
-                        <td>{{$item->rusn_title}}</td>
-                        @if($item->grade_id == 1)
-                         <td>{{$item->grade_title}}</td>
-                        $elseif($item->star == 1)
-                         <td>{{$item->star_title}}</td>
-                        @else
-                          <td>{{$item->speech_title}}</td>
-                        @endif
+                        <td>{{$item->rusn_id}}</td>
+                        <td>{{$item->star_title}}</td>
+                        <td>{{$item->remark}}</td>
                         <td class="text-center">{{$item->created_at}}</td>
                         <td class="text-center">
                             @if($item->status == 1)
