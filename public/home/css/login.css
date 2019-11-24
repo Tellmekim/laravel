@@ -1,0 +1,1129 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: url(/home/image/img79.jpg) no-repeat center center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    min-height: 860px;
+}
+
+.logo_head {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+    .logo_head a {
+        width: auto;
+        height: 100px;
+        display: inline-block;
+    }
+
+    .logo_head img {
+        width: auto;
+        height: 100px;
+        display: inline-block;
+    }
+
+.main_box {
+    width: 430px;
+    height: auto;
+    margin: 50px auto;
+    border-radius: 10px;
+    background: #fff;
+    padding: 50px;
+}
+
+.tab_box {
+    width: 210px;
+    height: 38px;
+    margin: 0 auto;
+    border: 1px solid #3dc3e1;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+    .tab_box a {
+        width: 104px;
+        line-height: 36px;
+        height: 100%;
+        font-size: 16px;
+        color: #3dc3e1;
+        border-radius: 50px;
+    }
+
+.tab_on {
+    background: #3dc3e1 !important;
+    color: #fff !important;
+}
+
+.com_div {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+    .com_div:nth-child(1) {
+        background: url(/home/image/img25.png) no-repeat left center;
+    }
+
+    .com_div:nth-child(2),
+    .com_div:nth-child(3) {
+        background: url(/home/image/img27.png) no-repeat left center;
+    }
+
+    .com_div img {
+        border: 1px solid #dbdbdb;
+        margin-left: 10px;
+        border-radius: 50px;
+        float: right;
+    }
+
+.com_div2 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+    .com_div2:nth-child(1) {
+        background: url(/home/image/img25.png) no-repeat left center;
+    }
+
+    .com_div2:nth-child(2) {
+        background: url(/home/image/img26.png) no-repeat left center;
+    }
+
+    .com_div2:nth-child(3),
+    .com_div2:nth-child(4) {
+        background: url(/home/image/img27.png) no-repeat left center;
+    }
+
+.input1 {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-radius: 50px;
+    padding: 0 20px;
+    float: left;
+    margin-left: 28px;
+    font-size: 14px;
+}
+
+.get_code {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+}
+
+    .get_code a, .get_code p {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        color: #666;
+        text-align: center;
+        background: #ececec;
+        font-size: 13px;
+        border-radius: 50px;
+    }
+
+.input2 {
+    width: 165px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-radius: 50px;
+    padding: 0 20px;
+}
+
+.rem {
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+    .rem a {
+        color: #dc0024;
+    }
+
+    .rem input {
+        margin-top: 1.5px;
+        margin-right: 5px;
+    }
+
+.main_box .sub {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: #3dc3e1;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 35px;
+    transition: all 0.3s;
+    margin-top: 35px;
+}
+
+    .main_box .sub:hover {
+        background: #05a8cc;
+    }
+
+.forget {
+    font-size: 14px;
+    color: #666;
+}
+
+    .forget:hover {
+        color: #3dc3e1;
+    }
+
+.apply_box {
+    width: 100%;
+    height: auto;
+    background: rgba(2,62,129,0.3);
+    border-radius: 50px;
+    box-shadow: 3px 3px 15px 2px #0b182f;
+    padding: 50px 0;
+}
+
+    .apply_box .img_box {
+        width: 354px;
+        height: 435px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 50px;
+    }
+
+    .apply_box .cont {
+        width: 60%;
+        height: auto;
+        margin-left: 5%;
+    }
+
+        .apply_box .cont .p1:nth-child(1) {
+            margin-top: 0;
+        }
+
+        .apply_box .cont .p1 {
+            font-size: 16px;
+            color: #fff;
+            margin: 30px 0;
+            font-family: "PingFang Regular";
+        }
+
+        .apply_box .cont .p2 {
+            margin-bottom: 10px;
+            color: #fff;
+            font-family: "PingFang Light";
+        }
+
+        .apply_box .cont .label {
+            color: #fff;
+            font-family: "PingFang Light";
+            cursor: pointer;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+            .apply_box .cont .label input {
+                width: 18px;
+                height: 18px;
+                margin-top: 3px;
+                margin-right: 5px;
+            }
+
+    .apply_box .sub {
+        width: 112px;
+        height: 38px;
+        color: #fff;
+        background: #6ea5e2;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        display: block;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+        .apply_box .sub:hover {
+            background: #3dc4e2;
+        }
+
+.container2 {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 20px;
+}
+
+    .container2 .location {
+        width: 100%;
+        height: 32px;
+        background: url(/home/image/img51.png) no-repeat left center;
+        font-family: "PingFang Regular";
+        font-size: 18px;
+        color: #fff;
+        padding-left: 40px;
+        line-height: 32px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+        .container2 .location a {
+            color: #fff;
+        }
+
+            .container2 .location a:hover {
+                color: #3dc4e2;
+            }
+
+
+
+    .container2 .lesson_box {
+        width: 100%;
+        height: auto;
+        background: rgba(2,62,129,0.3);
+        padding: 35px 65px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 15px 2px #0b182f;
+        position: relative;
+    }
+
+        .container2 .lesson_box .location a {
+            width: auto;
+            height: 32px;
+            display: inline-block;
+            font-family: "PingFang Regular";
+            font-size: 18px;
+            color: #fff;
+            line-height: 32px;
+        }
+
+            .container2 .lesson_box .location a:hover {
+                color: #3dc4e2;
+            }
+
+        .container2 .lesson_box .pattern {
+            margin-left: 0 !important;
+            margin-bottom: 20px;
+        }
+
+        .container2 .lesson_box .info .repear {
+            width: auto;
+            height: 40px;
+            background: url(/images/img52_1.png) no-repeat left center;
+            float: right;
+            margin-right: 15px;
+        }
+
+            .container2 .lesson_box .info .repear a {
+                width: auto;
+                height: 39px;
+                display: inline-block;
+                float: left;
+                font-size: 15px;
+                line-height: 39px;
+                color: #fff;
+                margin-right: 30px;
+                font-weight: bold;
+                background: url(/home/image/ico.png) no-repeat left center;
+                padding-left: 25px;
+                font-family: "PingFang Regular";
+            }
+
+                .container2 .lesson_box .info .repear a.on, .lesson_box .info .repear a:hover {
+                    background: url(/home/image/ico2.png) no-repeat left center;
+                    color: #3dc3e1;
+                }
+
+                .container2 .lesson_box .info .repear a:first-child {
+                    margin-left: 60px;
+                }
+
+            .container2 .lesson_box .info .repear b {
+                width: 85px;
+                height: 85px;
+                display: inline-block;
+                background: url(/home/image/img60.png) no-repeat center center;
+                background-size: 100%;
+                font-size: 26px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                line-height: 85px;
+                float: right;
+                font-family: "PingFang Regular";
+            }
+
+        .container2 .lesson_box .info .pat {
+            font-family: "PingFang Regular";
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 50px;
+        }
+
+            .container2 .lesson_box .info .pat:hover {
+                color: #3dc4e2;
+            }
+
+            .container2 .lesson_box .info .pat input {
+                width: 18px;
+                height: 18px;
+                margin-top: 2px;
+                margin-right: 5px;
+            }
+
+        .container2 .lesson_box .info .playtype {
+            width: auto;
+            height: 40px;
+            float: right;
+            margin-right: 15px;
+        }
+
+            .container2 .lesson_box .info .playtype b {
+                width: auto;
+                height: 39px;
+                display: inline-block;
+                float: left;
+                font-size: 15px;
+                line-height: 39px;
+                color: #fff;
+                margin-right: 5px;
+                font-weight: bold;
+                font-family: "PingFang Regular";
+            }
+
+            .container2 .lesson_box .info .playtype a {
+                width: auto;
+                height: 39px;
+                display: inline-block;
+                float: left;
+                font-size: 15px;
+                line-height: 39px;
+                color: #fff;
+                margin-right: 30px;
+                font-weight: bold;
+                background: url(/home/image//ico.png) no-repeat left center;
+                padding-left: 25px;
+                font-family: "PingFang Regular";
+            }
+
+                .container2 .lesson_box .info .playtype a.on, .lesson_box .info .playtype a:hover {
+                    background: url(/home/image/ico2.png) no-repeat left center;
+                    color: #3dc3e1;
+                }
+
+
+.pat_on {
+    color: #3dc4e2 !important;
+}
+
+.lesson_box .pattern img {
+    margin-right: 20px;
+}
+
+.lesson_box .info {
+    width: 100%;
+    height: 40px;
+}
+
+    .lesson_box .info .time_box {
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        background: url(/home/image/img53.png) no-repeat left center;
+        padding-left: 55px;
+    }
+
+        .lesson_box .info .time_box span {
+            width: auto;
+            height: 40px;
+            display: inline-block;
+            font-family: "BRADHITC";
+            font-size: 28px;
+            color: #fff;
+            line-height: 40px;
+        }
+
+    .lesson_box .info a.btn {
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        font-family: "PingFang Regular";
+        font-size: 18px;
+        color: #fff;
+        float: right;
+        margin-right: 50px;
+        line-height: 40px;
+    }
+
+    .lesson_box .info .sy3 {
+        background: url(/home/image/img55.png) no-repeat left center;
+        background-size: 24%;
+        padding-left: 50px;
+        margin-right: 0 !important;
+    }
+
+    .lesson_box .info .sy4 {
+        background: url(/home/image/img54.png) no-repeat left center;
+        background-size: 37%;
+        padding-left: 50px;
+    }
+
+    .lesson_box .info a.btn:hover {
+        color: #3dc4e2;
+    }
+
+.lesson_box .answer_box {
+    margin-top: 20px;
+}
+
+
+.ans_zz {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(2,62,129,0.4);
+    left: 0;
+    top: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+.lesson_box .percent {
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    line-height: 106px;
+    background: url(/home/image/img60.png);
+    top: 33px;
+    right: 110px;
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-family: "PingFang Bold";
+}
+
+
+.cho_box {
+    background: rgba(2,62,129,0.3);
+    border-radius: 50px;
+    box-shadow: 3px 3px 15px 2px #0b182f;
+    padding-top: 35px;
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+}
+
+.cho_box2 {
+    background: rgba(2,62,129,0.3);
+    border-radius: 50px;
+    box-shadow: 3px 3px 15px 2px #0b182f;
+    padding-top: 20px;
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+}
+
+    .cho_box2 .title_box2 {
+        width: 90%;
+        height: 40px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+        .cho_box2 .title_box2 p {
+            width: 100%;
+            height: 40px;
+            display: inline-block;
+            font-size: 28px;
+            font-family: "PingFang Regular";
+            color: #fff;
+            text-align: center;
+            line-height: 1.5em;
+        }
+
+        .cho_box2 .title_box2 a.sy2 {
+            width: auto;
+            height: 40px;
+            display: inline-block;
+            font-family: "PingFang Regular";
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            top: 0;
+            float: right;
+            position: absolute;
+            right: 0;
+            background: url(/home/image/ico.png) no-repeat left center;
+            padding-left: 24px;
+        }
+
+        .cho_box2 .title_box2 a.sy {
+            width: auto;
+            height: 40px;
+            display: inline-block;
+            font-family: "PingFang Regular";
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            top: 0;
+            float: right;
+            position: absolute;
+            right: 0;
+            background: url(/images/img52_1.png) no-repeat left center;
+            background-size: 42%;
+            padding-left: 40px;
+        }
+
+            /*.cho_box2 .title_box2 a:nth-child(2) {
+                right: 100px;
+            }*/
+
+        .cho_box2 .title_box2 a.sy:hover {
+            color: #3dc4e2;
+        }
+
+            .cho_box2 .title_box2 a.sy2:hover, .cho_box2 .title_box2 a.on {
+                background: url(/home/image/ico2.png) no-repeat left center;
+                color: #3dc4e2;
+            }
+
+    .cho_box2 .ul_box2 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+        .cho_box2 .ul_box2 p {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            font-family: "PingFang Regular";
+            font-size: 26px;
+            color: #fff;
+        }
+
+            .cho_box2 .ul_box2 p.info {
+                width: 100%;
+                height: auto;
+                display: inline-block;
+                font-family: "PingFang Regular";
+                font-size: 16px;
+                color: #fff;
+                line-height: 1.5em;
+                margin-top: 15px;
+            }
+
+        .cho_box2 .ul_box2 .img_box {
+            width: 100%;
+            height: 325px;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 325px;
+            position: relative;
+        }
+
+            .cho_box2 .ul_box2 .img_box a {
+                width: auto;
+                height: 40px;
+                display: inline-block;
+                padding: 0 20px;
+                font-family: "PingFang Regular";
+                font-size: 20px;
+                color: #fff;
+                line-height: 40px;
+                position: absolute;
+                top: 45%;
+            }
+
+                .cho_box2 .ul_box2 .img_box a:nth-child(1) {
+                    left: 25%
+                }
+
+                .cho_box2 .ul_box2 .img_box a:nth-child(3) {
+                    right: 25%
+                }
+
+            .cho_box2 .ul_box2 .img_box img {
+                width: auto;
+                height: auto;
+                max-height: 100%;
+                border-radius: 15px;
+            }
+
+        .cho_box2 .ul_box2 .btn {
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 15px;
+        }
+
+            .cho_box2 .ul_box2 .btn a.start {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 50px;
+                position: relative;
+                border-radius: 50%;
+                background: url(/home/image/icon_record1.png) no-repeat center center;
+                background-size: 100% 100%;
+                background-color: #fff;
+            }
+
+                .cho_box2 .ul_box2 .btn a.start i {
+                    width: 48px;
+                    height: 48px;
+                    display: inline-block;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    background: url(/home/image/icon_score.png) no-repeat center center;
+                    background-size: 100% 100%;
+                    position: absolute;
+                    top: 1px;
+                    left: 1px;
+                }
+
+
+            .cho_box2 .ul_box2 .btn a.restart {
+                width: 155px;
+                height: 50px;
+                display: inline-block;
+                font-size: 20px;
+                font-family: "PingFang Regular";
+                background: #3dc4e2;
+                color: #fff;
+                padding: 0 25px;
+                border-radius: 25px;
+                margin: 0 10px;
+            }
+
+            .cho_box2 .ul_box2 .btn p {
+                width: 155px;
+                height: 50px;
+                display: inline-block;
+                font-size: 20px;
+                font-family: "PingFang Regular";
+                background: #fff;
+                color: #3dc4e2;
+                padding: 0 25px;
+                border-radius: 25px;
+                margin: 0 10px;
+            }
+
+.title_box {
+    width: 330px;
+    margin: 0 auto;
+}
+
+    .title_box img {
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+
+    .title_box .p1 {
+        font-size: 28px;
+        font-family: "PingFang Regular";
+    }
+
+    .title_box .p2 {
+        font-size: 20px;
+        font-family: "PingFang Light";
+    }
+
+.ul_box {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    background: url(/home/image/chose.png) no-repeat center center;
+}
+
+.cho_box ul {
+    width: 100%;
+    height: auto;
+}
+
+    .cho_box ul li {
+        width: 130px;
+        height: auto;
+        position: absolute;
+        font-size: 48px;
+        font-family: "BRADHITC";
+        text-align: center;
+    }
+
+        .cho_box ul li a {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            text-align: center;
+            font-weight: bold;
+        }
+
+            .cho_box ul li a i {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                text-align: center;
+                font-weight: bold;
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 130px;
+            }
+
+        .cho_box ul li img {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+
+        .cho_box ul li p {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            line-height: 1.5em;
+            font-size: 16px;
+            color: #fff18d;
+            font-weight: bold;
+            font-family: "PingFang Light";
+            margin-top: -15px;
+        }
+
+        .cho_box ul li:nth-child(1) {
+            left: 20px;
+            bottom: 50px;
+        }
+
+        .cho_box ul li:nth-child(2) {
+            left: 150px;
+            top: 65px;
+        }
+
+        .cho_box ul li:nth-child(3) {
+            left: 295px;
+            bottom: 50px;
+        }
+
+        .cho_box ul li:nth-child(4) {
+            left: 435px;
+            top: 75px;
+        }
+
+        .cho_box ul li:nth-child(5) {
+            right: 450px;
+            top: 195px;
+        }
+
+        .cho_box ul li:nth-child(6) {
+            right: 330px;
+            top: 68px;
+        }
+
+        .cho_box ul li:nth-child(7) {
+            right: 195px;
+            bottom: 15px;
+        }
+
+        .cho_box ul li:nth-child(8) {
+            right: 85px;
+            top: 75px;
+        }
+
+
+.cho_box .page {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-top: 40px;
+}
+
+    .cho_box .page a {
+        width: auto;
+        height: 35px;
+        display: inline-block;
+        font-family: "PingFang Light";
+        background: #3dc3e1;
+        text-align: center;
+        line-height: 35px;
+        margin: 0 7px;
+        padding: 0 20px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cho_box .page b {
+        width: auto;
+        height: 35px;
+        display: inline-block;
+        font-family: "PingFang Light";
+        text-align: center;
+        line-height: 35px;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cho_box .page p {
+        width: auto;
+        height: 35px;
+        display: inline-block;
+        font-family: "PingFang Light";
+        text-align: center;
+        line-height: 35px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cho_box .page select {
+        width: 60px;
+        height: 25px;
+        display: inline-block;
+        font-family: "PingFang Light";
+        text-align: center;
+        line-height: 1.5em;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .cho_box .page a.page_active,
+    .cho_box .page a:hover {
+        background: #09f4fb;
+    }
+
+.ul_box::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 17px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.ul_box::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #c96811;
+}
+
+.ul_box::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+}
+
+.cho_box ul li:hover .star {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1240px) {
+
+    .container2 {
+        width: 90%;
+        height: auto;
+    }
+
+    .cho_box {
+        width: 96%;
+        height: auto;
+        margin: 0 auto;
+        min-height: 400px;
+        padding-bottom: 25px;
+    }
+
+    .cho_box2 {
+        width: 96%;
+        height: auto;
+        margin: 0 auto;
+        min-height: 500px;
+        padding-bottom: 25px;
+    }
+
+        .cho_box2 .ul_box2 .img_box a:nth-child(1) {
+            left: 13%
+        }
+
+        .cho_box2 .ul_box2 .img_box a:nth-child(3) {
+            right: 13%
+        }
+
+    .ul_box {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 auto;
+        position: unset;
+        background: none;
+        text-align: center;
+        min-height: 300px;
+        padding-top: 25px;
+    }
+
+    .cho_box ul li {
+        width: 15%;
+        height: auto;
+        position: unset;
+        font-size: 48px;
+        font-family: "BRADHITC";
+        text-align: center;
+        float: left;
+        margin-left: 4%;
+        margin-bottom: 25px;
+    }
+
+        .cho_box ul li a {
+            position: relative;
+        }
+
+            .cho_box ul li a i {
+                height: auto;
+                top: 23%;
+                left: 0;
+                line-height: 1.5em;
+            }
+
+        .cho_box ul li img {
+            width: 100%;
+            height: 146px;
+            border: none;
+        }
+
+    .cho_box .page {
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        margin-top: 0px;
+    }
+
+        .cho_box .page a {
+            padding: 0 15px;
+        }
+
+    .apply_box {
+        width: 90%;
+        height: auto;
+        background: rgba(2,62,129,0.3);
+        border-radius: 50px;
+        box-shadow: 3px 3px 15px 2px #0b182f;
+        padding: 50px 0;
+        margin: 0 auto;
+    }
+
+        .apply_box .img_box {
+            width: 30%;
+            height: auto;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-left: 50px;
+        }
+
+        .apply_box .cont {
+            width: 60%;
+            height: auto;
+            margin-left: 2%;
+        }
+
+            .apply_box .cont .p1:nth-child(1) {
+                margin-top: 0;
+            }
+
+            .apply_box .cont .p1 {
+                font-size: 16px;
+                color: #fff;
+                margin: 20px 0;
+                font-family: "PingFang Regular";
+            }
+
+            .apply_box .cont .label {
+                color: #fff;
+                font-family: "PingFang Light";
+                cursor: pointer;
+                display: block;
+                margin-bottom: 10px;
+            }
+}
+
+@media (max-height: 860px) {
+    body {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+}
+
+#xieyi .content {
+    width:96%;
+    height:400px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    margin:0 auto;
+    margin-top:15px;
+}
+
+#xieyi .content h1{
+    width: 100%;
+    height: auto;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:1.5em;
+    margin-bottom:10px;
+}
+
+#xieyi .content .cont{
+    width: 100%;
+    height: auto;
+    font-size:14px;
+    line-height:1.8em;
+}
+
+
+    #xieyi .btn {
+        width: 100%;
+        height: auto;
+        text-align:center;
+        margin-top:15px;
+    }
+
+        #xieyi .btn a {
+            width: auto;
+            height: 40px;
+            display: inline-block;
+            background: #3dc4e2;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0 35px;
+            color: #fff;
+            border-radius: 5px;
+        }
