@@ -16,9 +16,10 @@ class CreateRushThroughTable extends Migration
         Schema::create('rush_through', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('uniacid')->nullable()->comment('公众号ID');
-            $table->string('rusn_title')->nullable()->comment('闯关名词');
+            $table->string('rusn_title')->nullable()->comment('闯关名称');
             $table->text('img_url',65535)->nullable()->comment('闯关链接');
             $table->tinyInteger('is_yes')->nullable()->comment('0错,1对');
+            $table->integer('score')->nullable()->comment('分数');
             $table->integer('grade_id')->nullable()->comment('年级ID');
             $table->integer('star')->nullable()->comment('星球ID');
             $table->integer('speech_id')->nullable()->comment('词类ID');

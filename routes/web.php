@@ -37,5 +37,16 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
         Route::resource('rules','RulesController',['only'=> ['index','create','store','update','edit','destroy'] ]);  //权限
 
         Route::resource('actions','ActionLogsController',['only'=> ['index','destroy'] ]);  //日志
+        
+        Route::resource('rush-through','RushThroughController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关列表
+  
+        Route::resource('speech','SpeechController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关词类
+      
+        Route::resource('grade','GradeController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关年级
+      
+        Route::resource('star','StarController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//闯关星球
+      
     });
+
+    
 });
