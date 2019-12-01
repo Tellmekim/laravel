@@ -1,15 +1,22 @@
 <?php
 
 namespace App\Http\Controllers\Home;
-
-use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-     function  index(){
-	      return view('home.indexs.index');
+     function  returndata(){
+		 
+		// var_dump($this->viewdata); die;
+		return $this->display('home.indexs.index');
+		
+	 }
+	 function  index(){    
+		 
+		 
+		 return $this->display('home.indexs.canvas');
 	 }
 	  public function login()
     {
