@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no,minimum-scale=0.5,maximum-scale=2.0">
     <meta name="format-detection" content="telephone=no">
-    <title>@yield('title', config('app.name', 'Laravel'))</title>
-    <meta name="keywords" content="@yield('title', config('app.name', 'Laravel'))">
+    <title>{{$sysconfig['webname']}}</title>
+    <meta name="keywords" content="{{$sysconfig['keywords']}}">
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/jquery.fullPage.css')}}">
     <link rel="stylesheet" type="text/css" href="{{loadEdition('/home/css/animate.min.css')}}">
@@ -17,20 +17,18 @@
     <script type="text/javascript" src="{{loadEdition('/home/js/common.js')}}"></script>
     @yield('css')
 </head>
-<body>
-    <input type="hidden" id="SiteDomain" value="https://www.bangyuanjiaoyu.com">
-    <div class="zz" style="height: 609px;"></div>
+<body style="backgroud:url({{$sysconfig['background']}})">
+    <input type="hidden" id="SiteDomain">
+    <div class="zz"></div>
 <div class="study_box">
 </div>
-
-<div class="qrcode_box">
+<!--<div class="qrcode_box">
 	<img src="{{loadEdition('/home/image/img33.png')}}" class="close_qrcode">
     <div class="qrcode_box2">
         <img src="{{loadEdition('/home/image/signin_0.jpg')}}" alt="">
         <p>请用微信扫一扫上面的二维码，分享页面到<br>朋友圈或者分享给朋友即可打卡签到成功</p>
     </div>
-</div>
-
+</div>-->
 <div class="zl_box clearfix">
 	<p class="p1 text-center">个人资料</p>
 	<p class="p2 text-center">Personal information</p>
@@ -77,10 +75,10 @@
 	$("#date").selectDate();
 })
 </script>
-<div class="container">
+<div class="container ">
     <header class="clearfix">
         <a href="https://www.bangyuanjiaoyu.com/">
-            <img src="{{loadEdition('/home/image/img1.png')}}" class="logo fadeInDownBig wow animated animated" data-wow-delay="1s" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeInDownBig;"></a>
+            <img src="{{$sysconfig['logo']}}" class="logo fadeInDownBig wow animated animated" data-wow-delay="1s" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeInDownBig;"></a>
         <ul class="text-left">
             <li class="left">
                 <a href="https://www.bangyuanjiaoyu.com/" class="header_on">首页</a>
@@ -124,8 +122,9 @@
 </div>
 <div class="clear"></div>
 @yield('content')
+<div class="clear"></div>
 @yield('js')
- <p class="copyright">@ Copyright 2018广州邦元教育科技有限公司. All Rights Reserved.  粤ICP备17005305号</p>
+ <p style="margin:20px; position:inherit;"class="copyright">{{$sysconfig['copyright']}}</p>
 <script type="text/javascript" src="{{loadEdition('/home/js/wow.min.js')}}"></script>
 <script type="text/javascript">
 $(function(){
@@ -150,20 +149,17 @@ $('.after_log').hover(function() {
 });
 </script>
     <script type="text/javascript" src="{{loadEdition('/Home/js/jquery.fullPage.min.js')}}"></script>
-    <script type="text/javascript" src="{{loadEdition('/Home/js/wow.min.js')}}"></script>
     <script type="text/javascript" src="{{loadEdition('/Home/js/android.js')}}"></script>
     <script type="text/javascript">
-    $(function () {
-        var height = parseInt($("body").height());
-        var h = parseInt($(".default_main").height());
-        var mar = ((height - h) / 2) - 100;
-        $(".default_main").css("margin-top", mar);
-    });
-    <script>
+        $(function () {
+            var height = parseInt($("body").height());
+            var h = parseInt($(".default_main").height());
+            var mar = ((height - h) / 2) - 100;
+            $(".default_main").css("margin-top", mar);
+        });
          $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     </script>
     @yield('footer-js')
-    </script>
 </body>
 
 </html>
