@@ -11,6 +11,9 @@ class BaseController extends Controller
 	   public function __construct()
     {
         $this->assign('sysconfig',M('config')->get_system());
+		if($userinfo=session('userinfo')){
+			$this->assign('userinfo',$userinfo);
+		}
     }
 	public function  assign($key,$value){
 		$this->viewdata[$key]=$value;

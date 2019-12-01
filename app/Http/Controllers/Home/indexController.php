@@ -13,10 +13,18 @@ class IndexController extends BaseController
 		return $this->display('home.indexs.index');
 		
 	 }
-	 function  index(){    
-		 
-		 
+	 function  index(){  
+
 		 return $this->display('home.indexs.canvas');
+	 }
+	 public function canvasData(){
+		 
+		  if(!empty($this->viewdata['userinfo'])){
+			 $data=M('Common')->get_index($this->viewdata['userinfo']);
+		 }else{
+		   $data=M('Common')->get_index();
+		 }
+		 return $data;
 	 }
 	  public function login()
     {
