@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('postLogin','Home\LoginController@postLogin')->name('postLogin');  
+Route::post('canvasData','Home\IndexController@canvasData')->name('canvasData');  
+Route::post('postRegister','Home\LoginController@postRegister')->name('postRegister');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
