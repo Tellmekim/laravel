@@ -54,7 +54,7 @@
         }
         $.post($('#registerForm').attr('action'),data,function(data){
             if(data.code=='1'){
-                histroy.go(-1);
+                history.go(-1);
               }else{
                   alert(data.msg);
               }
