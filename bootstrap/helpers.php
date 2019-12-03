@@ -80,3 +80,11 @@ function unique_arr($array2D,$stkeep=false,$ndformat=true){
 
     return $output;
 }
+
+ function M($model){
+		$class= new \App\Models\Base($model);
+		$newres=$class->import(); 
+		$class_data[$model]=$newres;
+		//var_dump($class_data);
+		 return $newres;
+ }
