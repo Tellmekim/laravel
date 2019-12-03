@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 class IndexController extends BaseController
 {
      function  returndata(){
@@ -13,11 +14,14 @@ class IndexController extends BaseController
 		return $this->display('home.indexs.index');
 		
 	 }
-	 function  index(){  
-var_dump(session('userinfo')); die;
+	 function  index(Request $request){  
+		//$request= new Request();
+		$userinfo=$request->session()->get('userinfo');	
+		//var_dump($userinfo); die;
 		 return $this->display('home.indexs.canvas');
 	 }
 	 public function canvasData(){
+		 
 		  if(!empty($this->viewdata['userinfo'])){
 			 $data=M('Common')->get_index($this->viewdata['userinfo']);
 		 }else{
