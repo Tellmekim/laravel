@@ -35,7 +35,7 @@ class Member extends Model
 		}else if(($res=$this->where('userName',$userName)->orwhere('mobile',$userName)->first())){
 			if($res->password== md5($passWord)){
 				$userinfo=$res->toArray();
-				session('userinfo',$userinfo);
+				session(['userinfo'=>$userinfo]);
 			    return ['code'=>1,'msg'=>'登录成功']; 
 			}else{
 				return ['code'=>-1,'msg'=>'密码错误'];

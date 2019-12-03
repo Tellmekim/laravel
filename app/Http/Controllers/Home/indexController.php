@@ -14,15 +14,14 @@ class IndexController extends BaseController
 		
 	 }
 	 function  index(){  
-
+var_dump(session('userinfo')); die;
 		 return $this->display('home.indexs.canvas');
 	 }
 	 public function canvasData(){
-		 
 		  if(!empty($this->viewdata['userinfo'])){
 			 $data=M('Common')->get_index($this->viewdata['userinfo']);
 		 }else{
-		   $data=M('Common')->get_index();
+		     $data=M('Common')->get_index();
 		 }
 		 return $data;
 	 }
