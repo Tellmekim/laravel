@@ -38,6 +38,11 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+		    \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             'throttle:60,1',
             'bindings',
         ],
@@ -58,5 +63,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'rbac' => \App\Http\Middleware\RbacAuth::class,   //后台BBAC权限控制
+		'Login'=> \App\Http\Middleware\Login::class, //前端登录判断
     ];
 }
