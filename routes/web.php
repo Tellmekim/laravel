@@ -3,11 +3,17 @@
 /**
  * 后台路由
  */
- Route::get('','Home\IndexController@index')->name('index');  //前端首页
+ Route::get('/','Home\IndexController@index')->name('index'); //前端首页
  Route::get('experience','Home\IndexController@experience')->name('experience');  //前端首页
  Route::get('checkpoint','Home\IndexController@checkpoint')->name('checkpoint');  //列表页面
  Route::get('success','Home\IndexController@success')->name('success');  //列表页面
- Route::get('study','Home\IndexController@study')->name('study');  //列表页面
+ Route::get('study','Home\IndexController@study')->name('study');     //列表页面
+ Route::get('login','Home\LoginController@index')->name('userLogin');   //登录
+ Route::get('register','Home\LoginController@register')->name('register')->middleware('Login'); ;  //注册
+ 
+  
+ Route::get('getCaptcha','Home\LoginController@getCaptcha')->name('getCaptcha');  //前端首页
+ 
 /**后台模块**/
 Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
 
@@ -45,6 +51,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
 });
 //Route::namespace('Home')->get('/index','namespace' => 'Home','IndexController@index')->name('index');
 //前端模块
+/*
 Route::group(['namespace' => 'Home','prefix' => 'home'], function (){
     Route::get('index','IndexController@index')->name('index');  //前端首页
     Route::get('login','IndexController@login')->name('login');  //前端首页
@@ -54,5 +61,5 @@ Route::group(['namespace' => 'Home','prefix' => 'home'], function (){
    /* Route::middleware(['auth:admin','rbac'])->group(function (){
 
     });*/
-});
+//});
 
