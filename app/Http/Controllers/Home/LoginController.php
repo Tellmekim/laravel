@@ -20,7 +20,6 @@ class LoginController extends BaseController
    
     public function postLogin(Request $request)
     {
-		
 		$postdata=$request->input();
 		$reslut=M('Member')->check_login($postdata);
 		 return $reslut;

@@ -30,11 +30,13 @@ class Common extends Model
 		
 		array('x'=>1200,'y'=>250,'img'=>'/home/image2/3_1_hide_strong.png','link'=>'','type'=>'img'),
 		array('x'=>1100,'y'=>570,'img'=>'/home/image2/3_2_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>80,'y'=>30,'img'=>'/home/image2/btn_login.png','link'=>'','type'=>'img'),
-		array('x'=>320,'y'=>30,'img'=>'/home/image2/btn_reg.png','link'=>'','type'=>'img'),
+		array('x'=>80,'y'=>30,'ywidth'=>150,'yheigth'=>80,'img'=>'/home/image2/btn_login.png','link'=>'login','type'=>'img'),
+		array('x'=>320,'y'=>30,'ywidth'=>150,'yheigth'=>80,'img'=>'/home/image2/btn_reg.png','link'=>'register','type'=>'img'),
 	);
 	function get_index($userinfo=''){
+		//var_dump($userinfo); die;
 		if(!empty($userinfo)){
+			var_dump($userinfo); die;
 			return array(
 			 'is_login'=>1,
 			 'weizhi'=>$this->indexdata,
