@@ -23,8 +23,18 @@ class StarController extends BaseController
      */
     public function index(Star $Star)
     {
-        $roles = $this->Star->paginate(10);
+        
+        $roles = $this->Star->where('parent_id','0')->where('rusn_id','1')->paginate(10);
+        return $this->view(null,compact('roles'));
+    }
 
+    public function grade(Star $Star){
+        $roles = $this->Star->where('parent_id','0')->where('rusn_id','2')->paginate(10);
+        return $this->view(null,compact('roles'));
+    }
+
+    public function speech(Star $Star){
+        $roles = $this->Star->where('parent_id','0')->where('rusn_id','3')->paginate(10);
         return $this->view(null,compact('roles'));
     }
 
@@ -34,7 +44,7 @@ class StarController extends BaseController
      */
     public function create()
     {
-        return $this->view();
+       // return $this->view();
     }
 
     /**
@@ -46,12 +56,11 @@ class StarController extends BaseController
     public function store(RoleRequest $request, Role $role)
     {
         $role->fill($request->all());
-
         $role->save();
 
         flash('添加关卡成功')->success()->important();
 
-        return redirect()->route('roles.index');
+        return redirect()->route('star.create');
     }
 
 
@@ -122,4 +131,42 @@ class StarController extends BaseController
 
         return redirect()->route('roles.index');
     }
+
+  /**
+     * 展示所有闯关
+     * @param RushThroughController 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function status(Request $request)
+    {
+      $id = $request->get('id');
+
+      if($id){
+         $data = Star::find($id);
+      
+        if($data['status'] == '1'){
+            $status=[
+            'status'=>'0',
+            'updated_at'=>time()
+            ];
+            Star::where('id',$id)->update($status);
+        }else{
+           
+             $status=['status'=>'1','updated_at'=>time()];
+             Star::where('id',$id)->update($status);
+        }
+         flash('修改成功')->success()->important();
+        return redirect()->route('star.index');
+      }
+      
+    }
+    
+    /**
+    * 子课程
+    */
+    public function childCourse(Request $request, Star $star){
+         // $id = $request->get('id');
+         // $data = $this->Star->where('parent_id',$id)->paginate(10);
+    }
+
 }
