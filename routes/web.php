@@ -5,14 +5,20 @@
  */
  Route::get('/','Home\IndexController@index')->name('index'); //前端首页
  Route::get('experience','Home\IndexController@experience')->name('experience');  //前端首页
- Route::get('checkpoint','Home\IndexController@checkpoint')->name('checkpoint');  //列表页面
- Route::get('success','Home\IndexController@success')->name('success');  //列表页面
- Route::get('study','Home\IndexController@study')->name('study');     //列表页面
- Route::get('login','Home\LoginController@index')->name('userLogin');   //登录
- Route::get('register','Home\LoginController@register')->name('register')->middleware('Login'); ;  //注册
  
-  
- Route::get('getCaptcha','Home\LoginController@getCaptcha')->name('getCaptcha');  //前端首页
+ Route::get('starList','Home\StarController@starList')->name('starList');  //列表页
+ 
+
+ Route::get('success','Home\IndexController@success')->name('success');  //成功
+
+ Route::get('login','Home\LoginController@index')->name('userLogin');   //登录
+ Route::get('register','Home\LoginController@register')->name('register');   //登录
+ Route::get('starindex','Home\StarController@index')->name('starindex')->middleware('Login'); ;  //注册
+ Route::get('courseLise','Home\CourseController@courseLise')->name('courseLise');  //列表页面
+ Route::get('courseDeatail','Home\CourseController@courseDeatail')->name('courseDeatail');  //列表页面
+ 
+ Route::get('getCaptcha','Home\LoginController@getCaptcha')->name('getCaptcha');  //验证码
+ Route::get('baoming','Home\BaomingController@index')->name('baoming');  //报名页面
  
 /**后台模块**/
 Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
