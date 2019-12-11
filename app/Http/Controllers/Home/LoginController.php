@@ -39,4 +39,8 @@ class LoginController extends BaseController
 		return $reslut;
 		//return view('home.indexs.register');
 	}
+	public function loginOut(){
+		session(['userinfo'=>'']);
+		return ['ocde'=>1,'weizhi'=>M('Common')->get_index(),'msg'=>'退出成功'];
+	}
 }

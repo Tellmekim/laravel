@@ -25,6 +25,8 @@ class BaseController extends Controller
 		return view($view,$this->viewdata);
 	}
 	public function is_login(){
-		
+		if($userinfo=session("userinfo")){
+			$this->assign('userinfo',$userinfo);
+		}
 	}
 }

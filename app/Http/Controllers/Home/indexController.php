@@ -14,14 +14,11 @@ class IndexController extends BaseController
 		return $this->display('home.indexs.index');
 		
 	 }
-	 function  index(Request $request){  
-		//$request= new Request();
-		$userinfo=$request->session()->get('userinfo');	
-		//var_dump($userinfo); die;
+	 function  index(){  
 		 return $this->display('home.indexs.canvas');
 	 }
 	 public function canvasData(){
-		 
+		  $this->is_login();
 		  if(!empty($this->viewdata['userinfo'])){
 			 $data=M('Common')->get_index($this->viewdata['userinfo']);
 		 }else{
@@ -31,15 +28,19 @@ class IndexController extends BaseController
 	 }
 	  public function login()
     {
-        return view('home.indexs.login');
+		 return $this->display('home.indexs.login');
+       // return view('home.indexs.login');
     }
 	 public function experience()
     {
-        return view('home.indexs.tiyan_list');
+		
+		 return $this->display('home.indexs.tiyan_list');
+     
     }
 	 public function checkpoint()
     {
-        return view('home.indexs.checkpoint');
+		return $this->display('home.indexs.checkpoint');
+      
     }
 	 public function success()
     {
