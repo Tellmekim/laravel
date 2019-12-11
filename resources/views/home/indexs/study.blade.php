@@ -37,7 +37,7 @@
     <meta name="keywords" content="少儿英语|商务英语|生活英语口语|企业英语|英语口语培训|远程培训英语">
     <meta name="description" content="广州邦元教育是权威的远程英语培训机构，提供少儿英语、商务英语、生活英语口语、企业英语、英语口语培训等课程公开教学，欢迎免费试听享受在线英语培训轻松、高效的教学体验。">
 
-    <link rel="stylesheet" type="text/css" href="/home/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/home/css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/home/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/home/css/common.css">
     <link rel="stylesheet" type="text/css" href="/home/css/login.css">
@@ -88,8 +88,8 @@
                         <div class="audioImg">
                         </div>
                         <div id="sound" class="sound">
-                            <div class="audiojs playing" classname="audiojs" id="audiojs_wrapper0">
-                               <audio preload="auto" id="audio" src="/home/image/get.mp3" title="get">不支持audio标签</audio>   
+                            <div class="audiojs playing" classname="audiojs" id="audiojs_wrapper0">a
+                               <audio preload="auto" id="audio"  title="get">不支持audio标签</audio>   
                                <div class="play-pause" style="display:none">         
                                     <p class="play"></p>         
                                     <p class="pause"></p>          
@@ -108,15 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="containerx clearfix">
-                    <div class="picture p1" style="margin-left: 2%; width: 47%; height: auto; margin-top: 20px;">
-                    <div class="topSound" style="height: 0px;">
-                    </div><img src="/home/image/get.jpg" onerror="this.onerror=null;this.src='/upload/course/4a188a49-27de-4c7e-a34f-5c07ca09eaed/get.jpg'" class="cImg" style="width: 108%; height: auto; margin-top: 2.3%; padding: 6px; border-radius: 20px;"></div><div class="picture p2" style="margin-left: 1%; width: 47%; height: auto; margin-top: 20px;">
-                    <div class="topSound" style="height: 0px;">
-                    </div>
-                        <img src="/home/image/fold.jpg" onerror="this.onerror=null;this.src='/upload/course/4a188a49-27de-4c7e-a34f-5c07ca09eaed/fold.jpg'" class="cImg" style="width: 108%; height: auto; margin-top: 2.3%; padding: 6px; border-radius: 20px;"></div>
-                    </div>
-                </div>
+                <div class="containerx clearfix"></div>
                 <input type="hidden" id="nowno" name="nowno" value="0270167">
                 <input type="hidden" id="nowpkid" name="nowpkid" value="fbaf4020-d398-4096-a6a3-15d34c47fcc6">
                 <input type="hidden" id="nowlastid" name="nowlastid" value="113d5af2bed9431a8e23d8d448eec82f">
@@ -167,7 +159,6 @@
 $(function(){
 	$('.sec1').css('height',$(window).height());
 })
-
 var wow = new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
@@ -189,11 +180,14 @@ $('.after_log').hover(function() {
 </script>
 <script type="text/javascript" src="/home/js/common.js"></script>
 <script type="text/javascript" src="/home/js/audio.js"></script>
-<script type="text/javascript" src="/home/js/index.js"></script>
+
+<script type="text/javascript" src="/home/js/exploreindex.js"></script>
 <script type="text/javascript">
-    audiojs.events.ready(function () {
-        playObj.init();
-    });
+    var cousre=<?php echo  json_encode($info) ?>;
+    var courseinfo=<?php echo  json_encode($courseinfo) ?>;
+    audiojs.events.ready(function() {
+        playObj.init(cousre,courseinfo);
+    })
 </script>
 </body>
 </html>

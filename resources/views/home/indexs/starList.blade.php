@@ -5,23 +5,21 @@
 @endsection
 @section('content')
 <div class="container">
-        <div class="cho_box clearfix" style="margin-top: 100px;">
-                <div class="title_box" style="margin-bottom: 50px;">
-                    <img src="{{$star_info['img']}}" class="left rollIn wow animated animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: rollIn;"><div class="left wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"><p class="p1" style="color: #c96811;">{{$star_info['star_title']}}</p><p class="p2" style="color: #ec8b2c;">{{$star_info['english']}}</p></div>
-                </div>
-            <div class="ul_box">
-            <ul class="clearfix">
-               @foreach($page['list'] as $key => $item)
-                <li>
-                    <a href="{{route('courseDeatail',['id'=>$item->course_id])}}"><img  src="/home/image/img103.png"></a>
-                    <p>{{$item->title}}&nbsp;{{$item->number}}</p>
-                </li>
-                @endforeach
-            </ul>
-                <div class="clear"></div>
+        <div class="sec4" style="margin-top: 100px;">
+            <div class="title_box" style="margin-bottom: 50px;">
+                <img src="{{$star_info['img']}}" class="left rollIn wow animated animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: rollIn;"><div class="left wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"><p class="p1" style="color: #c96811;">{{$star_info['star_title']}}</p><p class="p2" style="color: #ec8b2c;">{{$star_info['english']}}</p></div>
             </div>
-            <div class="clear"></div>
-            <?php echo $page['pg'];  ?>
+            <div class="box">
+                @foreach($son_list as $k => $item)
+                <div class="img_box wow animated fadeInUp animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <img src="{{$item['img']}}" class="img-responsive com_img">
+                <a href="{{route('courseLise',['id'=>$item['id']])}}">
+                    <p class="text-center">{{$item['star_title']}}（第一级）</p>
+                    <img src="/home/image/img11.png">
+                </a>
+                </div>
+                @endforeach
+                </div>
             <div class="clear"></div>
         </div>
     </div>
