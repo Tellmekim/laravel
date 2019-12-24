@@ -37,7 +37,7 @@ class CourseController extends BaseController
 	public function  submitAchie(Request $request){
 		 $postdata=$request->input();
 		 $userinfo=$this->is_login_back();
-		 var_dump($userinfo,$postdata); die;
+		 //var_dump($userinfo,$postdata); die;
 		 if($rs=M('Course')->add_score($postdata,$userinfo)){
 			  return $rs;
 		 }

@@ -19,6 +19,7 @@ class IndexController extends BaseController
 	 }
 	 public function canvasData(){
 		  $this->is_login();
+		
 		  if(!empty($this->viewdata['userinfo'])){
 			 $data=M('Common')->get_index($this->viewdata['userinfo']);
 		 }else{
@@ -49,5 +50,10 @@ class IndexController extends BaseController
 	public function study()
     {
         return view('home.indexs.study');
+    }
+	  }
+	public function bm()
+    {
+        return view('home.indexs.baoming');
     }
 }

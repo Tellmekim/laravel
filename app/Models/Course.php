@@ -123,7 +123,6 @@ class Course extends Model
 		
 	}
 	function add_score($postdata,$userinfo){
-		var_dump($userinfo); die;
 		if(empty($postdata['nowpkid'])){
 			return false;
 		}

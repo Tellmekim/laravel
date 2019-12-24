@@ -17,6 +17,7 @@
  Route::get('courseLise','Home\CourseController@courseLise')->name('courseLise');  //列表页面
  Route::get('courseDeatail','Home\CourseController@courseDeatail')->name('courseDeatail');  //列表页面
  Route::get('sucess','Home\CourseController@sucess')->name('sucess');  //列表页面
+ Route::get('bm','Home\CourseController@bm')->name('bm');  //列表页面
 
 
  Route::get('getCaptcha','Home\LoginController@getCaptcha')->name('getCaptcha');  //验证码

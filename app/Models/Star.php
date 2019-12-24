@@ -24,12 +24,14 @@ class Star extends Model
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
 	 public function get_star($requset){
-		$res=$this->where(['id'=>$requset['id']])->first(); 
-		return $res->toArray(); 
+		if($res=$this->where(['id'=>$requset['id']])->first()){
+			return $res->toArray(); 
+		}
 	 }
 	  function get_starList_son($requset){
-		 $res=$this->where(['parent_id'=>$requset['id']])->get();
-		 return $res->toArray(); 
+		if($res=$this->where(['parent_id'=>$requset['id']])->get()){
+			return $res->toArray(); 
+		}
 	 }
 	  function get_sta_parsen($info){
 		 $res=$this->where(['id'=>$info['parent_id']])->first();

@@ -352,9 +352,9 @@ function xuanputuclick(newObject,p){
 			if(arr[0]=='click'||arr[1]=='ajax'){
 				$.post(arr[2],{},function(data){
 					if(data.code=='1'){
-						
 						let s=0;
 						cxt.clearRect(0,0,newObject.widht,newObject.height);
+						location.reload()
 						weizhi=data.weizhi;
 						is_login=0;
 						restart(s);
@@ -362,7 +362,7 @@ function xuanputuclick(newObject,p){
 					}else{
 						alert(data.msg)
 					}
-				})
+				},'json')
 			}
 		   }else if(weizhi[i].link){
 				location.href=weizhi[i].link;
