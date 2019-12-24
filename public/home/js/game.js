@@ -1,10 +1,20 @@
-var cwidth=document.body.clientWidth;
-var cheight=document.body.clientHeight;
-
+var cwidth=document.body.clientWidth-50;
+var cheight=document.body.clientHeight-50;
 function get_height(bimgw,bimgh){
 	//max 1250;
-	let zwidth=cwidth<1250?cwidth:1250;
-	let zheight=(zwidth*bimgh/bimgw);
+	//let zwidth=cwidth<1250?cwidth:1250;
+	let newwidth= bimgw*cheight/cwidth;
+	if(newwidth>cwidth){
+		let	zwidth=cwidth;
+		let zheight=(zwidth*bimgh/bimgw);
+		return {width:zwidth,height:zheight,bi:bimgw/zwidth};
+	}else{
+		//console.log(cheight)
+		let	zheight=cheight;
+		let	zwidth=zheight*bimgw/bimgh;
+			return {width:zwidth,height:zheight,bi:bimgw/zwidth};
+	}
+	//let zheight=(zwidth*bimgh/bimgw);
      return {width:zwidth,height:zheight,bi:bimgw/zwidth};
 }
 function get_height_er(bimgw,bimgh){
@@ -33,49 +43,51 @@ function getEventPosition(ev){
         y = ev.offsetY;  
     }  
     return {x: x, y: y};  
-}   
+} 
+weizhi={};
 var c=document.getElementById("gameCanvas");
 var cxt=c.getContext("2d");
-var weizhi=[
-					{x:320,y:590,'img':'/home/image2/1_1_hide.png','type':'img'},
-					{x:315,y:435,'img':'/home/image2/1_2_hide.png','type':'img'},
-					{x:105,y:315,'img':'/home/image2/1_3_hide.png','type':'img'},
-					{x:155,y:120,'img':'/home/image2/1_4_hide.png','type':'img'},
-					{x:490,y:30,'img':'/home/image2/2_1_hide_strong.png','type':'img'},
-					{x:550,y:150,'img':'/home/image2/2_2_hide_strong.png','type':'img'},
-					{x:720,y:30,'img':'/home/image2/2_3_hide_strong.png','type':'img'},
-					{x:920,y:90,'img':'/home/image2/2_4_hide_strong.png','type':'img'},
-					{x:1200,y:250,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
-					{x:1100,y:570,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
-					{x:80,y:30,'img':'/home/image2/btn_login.png','type':'img'},
-					{x:320,y:30,'img':'/home/image2/btn_reg.png','type':'img'},
-				];
+
+		/*var weizhi=[
+				{x:320,y:590,'img':'/home/image2/1_1_hide.png','type':'img'},
+				{x:315,y:435,'img':'/home/image2/1_2_hide.png','type':'img'},
+				{x:105,y:315,'img':'/home/image2/1_3_hide.png','type':'img'},
+				{x:155,y:120,'img':'/home/image2/1_4_hide.png','type':'img'},
+				{x:490,y:30,'img':'/home/image2/2_1_hide_strong.png','type':'img'},
+				{x:550,y:150,'img':'/home/image2/2_2_hide_strong.png','type':'img'},
+				{x:720,y:30,'img':'/home/image2/2_3_hide_strong.png','type':'img'},
+				{x:920,y:90,'img':'/home/image2/2_4_hide_strong.png','type':'img'},
+				{x:1200,y:250,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
+				{x:1100,y:570,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
+				{x:80,y:30,'img':'/home/image2/btn_login.png','type':'img'},
+				{x:320,y:30,'img':'/home/image2/btn_reg.png','type':'img'},
+			];
 		var weizhi=[
-			{x:320,y:590,'img':'/home/image2/1_1_hide.png','type':'img'},
-			{x:315,y:435,'img':'/home/image2/1_2_hide.png','type':'img'},
-			{x:105,y:315,'img':'/home/image2/1_3_hide.png','type':'img'},
-			{x:170,y:140,'img':'/home/image2/1_4_hide.png','type':'img'},
-			{x:490,y:30,'img':'/home/image2/2_1_hide_strong.png','type':'img'},
-			{x:550,y:150,'img':'/home/image2/2_2_hide_strong.png','type':'img'},
-			{x:720,y:30,'img':'/home/image2/2_3_hide_strong.png','type':'img'},
-			{x:920,y:90,'img':'/home/image2/2_4_hide_strong.png','type':'img'},
-			{x:1200,y:250,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
-			{x:1100,y:570,'img':'/home/image2/3_1_hide_strong.png','type':'img'},
+			{x:320,y:590,'img':'/home/image2/1_1_hide.png',link:'','type':'img'},
+			{x:315,y:435,'img':'/home/image2/1_2_hide.png',link:'','type':'img'},
+			{x:105,y:315,'img':'/home/image2/1_3_hide.png',link:'','type':'img'},
+			{x:170,y:140,'img':'/home/image2/1_4_hide.png',link:'','type':'img'},
+			{x:490,y:30,'img':'/home/image2/2_1_hide_strong.png',link:'','type':'img'},
+			{x:550,y:150,'img':'/home/image2/2_2_hide_strong.png',link:'','type':'img'},
+			{x:720,y:30,'img':'/home/image2/2_3_hide_strong.png',link:'','type':'img'},
+			{x:920,y:90,'img':'/home/image2/2_4_hide_strong.png',link:'','type':'img'},
+			{x:1200,y:250,'img':'/home/image2/3_1_hide_strong.png',link:'','type':'img'},
+			{x:1100,y:570,'img':'/home/image2/3_1_hide_strong.png',link:'','type':'img'},
 			//{x:80,y:30,'img':'/home/image2/btn_login.png','type':'img'},
 			//{x:320,y:30,'img':'/home/image2/btn_reg.png','type':'img'},
-			{x:25,y:60,ywidth:100,yheigth:100,'img':'/home/image2/imgHead1.png','type':'img'},
-			{x:225,y:10,'img':'/home/image2/userinfo_exit2.png','type':'img'},
-			{x:0,y:570,'img':'/home/image2/btn_shared_result.png','type':'img'},
-			{x:1450,y:180,'img':'/home/image2/myFriendBtn.png','type':'img'},
-			{x:1490,y:350,'img':'/home/image2/btn_yuezhan.png','type':'img'},
-			{x:1490,y:470,'img':'/home/image2/btn_continue_study_new.png','type':'img'},
-			{x:1490,y:570,'img':'/home/image2/btn_records_.png','type':'img'},
+			{x:25,y:60,ywidth:100,yheigth:100,'img':'/home/image2/imgHead1.png',link:'','type':'img'},
+			{x:225,y:10,'img':'/home/image2/userinfo_exit2.png',link:'','type':'img'},
+			{x:0,y:570,'img':'/home/image2/btn_shared_result.png',link:'','type':'img'},
+			{x:1450,y:180,'img':'/home/image2/myFriendBtn.png',link:'','type':'img'},
+			{x:1490,y:350,'img':'/home/image2/btn_yuezhan.png',link:'','type':'img'},
+			{x:1490,y:470,'img':'/home/image2/btn_continue_study_new.png',link:'','type':'img'},
+			{x:1490,y:570,'img':'/home/image2/btn_records_.png',link:'','type':'img'},
 			/*{x:320,y:30,'info':{
 			  touxiang:'/home/image2/',
 
 			},'type':'user'},
 			*/
-		];				
+		//];				
 var budong={
 	userinfo:{
 		name:'小果果',
@@ -83,6 +95,8 @@ var budong={
 };
 var backgroundimg="/home/image2/unlogined1.jpg";
 var usernamebackground="/home/image2/userinfo_bg2.png";
+var font='';
+var font1='';
 var is_login=false;
 //var weizhi=[{x:320,y:590,'img':'image2/1_1.png'}];
 var newObject;
@@ -91,20 +105,37 @@ var stuts={is_all:true,is_icon:false,select_icon:{},xiatian:{},is_zhix_all:true,
 var is_zhi=true;
 var zhiqian={x:0,y:0};
 var gudiongzaiyan=[];
+var moveres={};
 //初始化
 var resou=[];
 var loading=0;
 var backgroundimg;
-let imgmian=new Image();
-	imgmian.src=backgroundimg;
-	imgmian.onload=function(info)
-	 {
-		backgroundimg=imgmian;
-		schua();
-	}
+function chushi(){
+	let imgmian=new Image();
+		imgmian.src=backgroundimg;
+		imgmian.onload=function(info)
+		{
+			backgroundimg=imgmian;
+			schua();
+		}
+}
+$.post(weburl,{},function(data){
+	weizhi=data.weizhi;
+	is_login=data.is_login=='1'?true:false;
+	userinfo=data.userinfo;
+	font=data.font;
+	font1=data.font1;
+	chushi()
+	setTimeout(()=>{
+		c.style.background='#fff';
+		$("#cocosLoading").css({display:'none'})
+	},1000);
+
+})
 	function goudingzai(newObject,cb){
 		//console.log(newObject)
 		//用户信息
+		if(is_login){
 		let gimg=new Image();
 			gimg.src=usernamebackground;
 			gimg.onload=function(){
@@ -127,10 +158,9 @@ let imgmian=new Image();
 					tqy:y,
 					neww:neww,
 					newh:newh,
-
 					isfont:true,
-					font:'亲爱的小果果',
-					font1:'123456同学',
+					font:font,
+					font1:font1,
 					fontx:parseInt(140/(newObject.bi)),
 					fonty:parseInt(105/(newObject.bi)),
 					fontsize:parseInt(22/(newObject.bi)),
@@ -142,6 +172,9 @@ let imgmian=new Image();
 				//cxt.drawImage(gimg,0,0,bimgw,bimgh,x,y,neww,newh);	
 				//cxt.save();
 			}
+		}else{
+			typeof cb=='function' &&cb();
+		}
 	}
 
 	function gouding(newObject){
@@ -164,18 +197,18 @@ let imgmian=new Image();
 function schua(){
 	//在主图
   //for(let z in weizhi){
+	//console.log(weizhi)
 	if(weizhi[loading].type=='img'){
 		let imgson=new Image();
 		imgson.src=weizhi[loading].img;
 		imgson.onload=function(info)
 		{
-			
 			resou[loading]=imgson;
 			if(loading+1<weizhi.length){
 				loading+=1;
 				schua();
 			}else{
-				main()
+				main();
 			}
 		}
 	}
@@ -260,30 +293,9 @@ function puimg_voer(s,newObject,puinfo){
 		//}
 }
 var fish=function (newObject){
-		cxt.canvas.onclicka= function(e){  
+		cxt.canvas.onclick= function(e){  
 			let p=getEventPosition(e);
-			if(is_zhi){
-				var zhiqian={x:p.x,y:p.y};
-				is_zhi=false;
-				let i=0;
-				stuts.is_all=true;
-				res=xuanputu(i,newObject,p)
-				//根据 res铺图
-				//	console.log(stuts.is_all,stuts.is_zhix_all)
-				if(stuts.is_all&&!stuts.is_zhix_all){
-						stuts.is_zhix_all=true;
-						//console.log('asd')
-						let s=0;
-						restart(s)
-						//	requestAnimationFrame(restart);
-				}else if(!stuts.is_all){
-					stuts.is_zhix_all=false;
-					let s=0;
-					restart_puimg_voer(s,newObject,res)
-				}else{
-					is_zhi=true;
-				}
-			}
+			xuanputuclick(newObject,p);
 		}
 	cxt.canvas.onmousemove= function(e){ 
 		let p=getEventPosition(e);
@@ -297,10 +309,7 @@ var fish=function (newObject){
 			stuts.is_all=true;
 			let resinfo=xuanputu(i,newObject,p)
 			res=resinfo[0];
-            if(p.x<500&&p.x>400&&p.y>70&&p.y<120){
-				//console.log(res);
-			   // console.log(resinfo[1]);
-			}
+			moveres=res;
 			//根据 res铺图
 				//console.log(stuts.is_all,stuts.is_zhix_all)
 			if(stuts.is_all&&!stuts.is_zhix_all){
@@ -322,42 +331,48 @@ var fish=function (newObject){
 			}
 		}
 
-	/*	for(var i in weizhi){
-			
-			newx=(weizhi[i].x/newObject.bi);
-			newy=(weizhi[i].y/newObject.bi);
-			condition=(newx<p.x&&newx+(150/newObject.bi)>p.x&&newy<p.y&&newy+(135/newObject.bi)>p.y);
-			console.log(newx,newy,weizhi[i].y,p,condition)
-			if(condition&&stuts.is_all){
-				img.src=weizhi[i].img;
-				img.onload = function(info)
-				{
-					stuts.is_all=false;
-					stuts['icone_'+i]=true;
-					let x=(weizhi[i].x/(newObject.bi+0.1))
-					let y=(weizhi[i].y/(newObject.bi+0.1))
-					let bimgw=img.width;
-					let bimgh=img.height;
-				  let newh=bimgh/(newObject.bi-0.4);
-					let  neww=bimgw/(newObject.bi-0.4)
-					cxt.drawImage(img,0,0,bimgw,bimgh,x,y,neww,newh);
-				}
-				break;
-				//console.log('asd')
-				//jiazimg(cxt,weizhi[i].img)
-			}else if(!condition&&!stuts.is_all){
-				 //  console.log(stuts.is_all)
-					stuts.is_all=true;
-					stuts.is_icon=false;
-					//console.log(condition,newy,p.y,newy+(135/newObject.bi),p.y,newy<p.y&&newy+(135/newObject.bi)>p.y)
-					huan();
-						break;
-			}
-			
-		}*/
 	}
 }
 
+function xuanputuclick(newObject,p){
+	let jieg={};
+	let xiatian={};
+	let icon='wu';
+	for(let i in  weizhi){
+		newx=(weizhi[i].x/newObject.bi);
+		newy=(weizhi[i].y/newObject.bi);
+		let img=resou[i];
+		let bimgw=img.width;
+		let bimgh=img.height;
+		//console.log(newObject,newx,newy,p)
+	    condition=(newx<p.x&&newx+(bimgw/newObject.bi)>p.x&&newy<p.y&&newy+(bimgh/newObject.bi)>p.y);
+		if(condition){
+		   if(weizhi[i].link&&(weizhi[i].link.split(':').length>2)){
+			var arr=weizhi[i].link.split(':');
+			if(arr[0]=='click'||arr[1]=='ajax'){
+				$.post(arr[2],{},function(data){
+					if(data.code=='1'){
+						
+						let s=0;
+						cxt.clearRect(0,0,newObject.widht,newObject.height);
+						weizhi=data.weizhi;
+						is_login=0;
+						restart(s);
+						alert(data.msg);
+					}else{
+						alert(data.msg)
+					}
+				})
+			}
+		   }else if(weizhi[i].link){
+				location.href=weizhi[i].link;
+			}else if(weizhi[i].tanka){
+			  //$('')
+			}
+		}
+	}
+	return [jieg,xiatian,icon];
+}
 function xuanputu(i,newObject,p){
 	let jieg={};
 	let xiatian={};
@@ -365,15 +380,19 @@ function xuanputu(i,newObject,p){
 	for(let i in  weizhi){
 		newx=(weizhi[i].x/newObject.bi);
 		newy=(weizhi[i].y/newObject.bi);
+		let img=resou[i];
+		let bimgw=img.width;
+		let bimgh=img.height;
 		//console.log(newObject,newx,newy,p)
-		condition=(newx<p.x&&newx+(150/newObject.bi)>p.x&&newy<p.y&&newy+(165/newObject.bi)>p.y);
+	    condition=(newx<p.x&&newx+(bimgw/newObject.bi)>p.x&&newy<p.y&&newy+(bimgh/newObject.bi)>p.y);
+		//condition=(newx<p.x&&newx+(150/newObject.bi)>p.x&&newy<p.y&&newy+(165/newObject.bi)>p.y);
 		if(condition&&stuts.is_all){
 			jieg[i]=true;
 			icon=i;
-			xiatian[i]=[newx,p.x,newx+(150/newObject.bi),p.x,newy,p.y,newy+(165/newObject.bi),p.y];
+			xiatian[i]=[newx,p.x,newx+(bimgw/newObject.bi),p.x,newy,p.y,newy+(bimgh/newObject.bi),p.y];
 			stuts.is_all=false;
 		}else{
-			xiatian[i]=[newx,p.x,newx+(150/newObject.bi),p.x,newy,p.y,newy+(165/newObject.bi),p.y]
+			xiatian[i]=[newx,p.x,newx+(bimgw/newObject.bi),p.x,newy,p.y,newy+(bimgh/newObject.bi),p.y]
 			jieg[i]=false;
 		}
 	}
@@ -519,8 +538,8 @@ var main = function () {
 	
 	setTimeout(()=>{
 		//console.log('')
-		c.style.background='#fff';
-		$("#cocosLoading").css({display:'none'})
+	//	c.style.background='#fff';
+		//$("#cocosLoading").css({display:'none'})
 	//	schua();
 	},1000);
 	

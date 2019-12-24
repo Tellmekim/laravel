@@ -31,7 +31,6 @@ class AdminsController extends BaseController {
     public function index()
     {
         $admins = $this->adminsService->getAdminsWithRoles();
-
         return $this->view(null, compact('admins'));
     }
 

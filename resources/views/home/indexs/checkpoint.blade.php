@@ -13,7 +13,8 @@
             <ul class="clearfix">
                @foreach($page['list'] as $key => $item)
                 <li>
-                    <a href="{{route('courseDeatail',['id'=>$item->course_id])}}"><img  src="/home/image/img103.png"></a>
+                    <a href="{{route('courseDeatail',['id'=>$item->course_id])}}">
+                        <img  src="/home/image/img103.png"></a>
                     <p>{{$item->title}}&nbsp;{{$item->number}}</p>
                 </li>
                 @endforeach

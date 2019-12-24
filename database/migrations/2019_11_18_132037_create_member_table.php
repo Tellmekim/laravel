@@ -15,7 +15,7 @@ class CreateMemberTable extends Migration
     {
         Schema::create('member', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->nullable()->comment('会员名称');
+            $table->string('userName')->nullable()->comment('会员名称');
             $table->string('password')->nullable()->comment('密码');
             $table->integer('mobile')->nullable()->comment('手机号码');
             $table->integer('created_at')->default(0)->comment('创建时间');

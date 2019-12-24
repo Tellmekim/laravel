@@ -14,7 +14,7 @@
                 <div class="img_box wow animated fadeInUp animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <img src="{{$item['img']}}" class="img-responsive com_img">
                 <a href="{{route('courseLise',['id'=>$item['id']])}}">
-                    <p class="text-center">{{$item['star_title']}}（第一级）</p>
+                    <p class="text-center">{{$item['star_title']}}</p>
                     <img src="/home/image/img11.png">
                 </a>
                 </div>

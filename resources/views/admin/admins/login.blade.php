@@ -44,9 +44,9 @@
                     <p class="m-t-md" style="color:#666">登录到{{ config('app.name', 'Laravel') }}系统后台管理</p>
                     <input type="text" class="form-control uname" name="name" value="{{old('name')}}" required placeholder="用户名" />
                     <input type="password" class="form-control pword m-b" name="password" required placeholder="密码" />
-                    <div style="width: 300px;">
+                   <!--  <div style="width: 300px;">
                         {!! Geetest::render() !!}
-                    </div>
+                    </div> -->
                     <p></p>
                     <button class="btn btn-success btn-block">登录</button>
                     <p></p>

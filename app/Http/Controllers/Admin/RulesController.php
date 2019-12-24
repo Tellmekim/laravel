@@ -34,6 +34,7 @@ class RulesController extends BaseController
      */
     public function create()
     {
+       
         $rules = $this->rulesService->getRulesTree();
 
         return $this->view(null,compact('rules'));

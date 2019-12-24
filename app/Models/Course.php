@@ -122,4 +122,39 @@ class Course extends Model
 		}
 		
 	}
+	function add_score($postdata,$userinfo){
+		var_dump($userinfo); die;
+		if(empty($postdata['nowpkid'])){
+			return false;
+		}
+		if(DB::table('course_score')->where('userId',$userinfo['id'])->where('course_id',$postdata['nowpkid'])->first()){
+			$updata=array(
+				'score'=>$postdata['score'],
+				'use_time'=>$postdata['sTime'],
+				'right'=>$postdata['right'],
+				'wrong'=>$postdata['wrong'],
+				'createTime'=>time(),
+			);
+			return DB::table('course_score')->where('userId',$userinfo['id'])->where('course_id',$postdata['nowpkid'])->update($updata);
+		}else{
+			$adddata=array(
+				'userId'=>$userinfo['id'],
+				'course_id'=>$postdata['nowpkid'],
+				'score'=>$postdata['score'],
+				'use_time'=>$postdata['sTime'],
+				'right'=>$postdata['right'],
+				'wrong'=>$postdata['wrong'],
+				'createTime'=>time(),
+			);
+			return	DB::table('course_score')->insertGetId($adddata);
+		}
+		
+	}
+	function get_score($postdata){
+		if(empty($postdata['newid'])){
+			return false;
+		}
+		$res=DB::table('course_score')->where('id',$postdata['newid'])->first();
+		return $res;
+	}
 }

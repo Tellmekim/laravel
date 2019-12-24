@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class CourseController extends BaseController
 {
-     function  courseLise(Request $request){
+  public   function  courseLise(Request $request){
 		$postdata=$request->input();
 		$info=M('star')->get_star($postdata);
 		//var_dump($star_info);die;
@@ -20,7 +20,8 @@ class CourseController extends BaseController
 	    $this->assign('page',$page);
 		return  $this->display("home.indexs.checkpoint");
 	 }
-	 function courseDeatail(Request $request){
+	public function courseDeatail(Request $request){
+		$userinfo=$this->is_login_back();
 		$postdata=$request->input();
 		if($courseinfo=M('Course')->get_detail($postdata)){
 			if($star_info=M('star')->get_star_items($courseinfo['star_id'])){
@@ -33,4 +34,19 @@ class CourseController extends BaseController
 			return  $this->display("home.indexs.study");
 		}
 	 }
+	public function  submitAchie(Request $request){
+		 $postdata=$request->input();
+		 $userinfo=$this->is_login_back();
+		 var_dump($userinfo,$postdata); die;
+		 if($rs=M('Course')->add_score($postdata,$userinfo)){
+			  return $rs;
+		 }
+	 }
+	public function sucess(Request $request){
+		$postdata=$request->input();
+		$score_info=M('Course')->get_score($postdata);
+		$this->assign('score_info',$score_info);
+		$this->assign('data',array(20,40,60,80,100));
+		return $this->display('home.indexs.success');
+	}
 }

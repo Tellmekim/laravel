@@ -12,7 +12,6 @@ function getPgjs() {
     }
     if (!from) {
         var SiteDomain = $("#SiteDomain").val();
-        console.log(SiteDomain);
         var res = agent.match(/android/);
         if (res == "android")
             window.location.href = SiteDomain + "/m/";

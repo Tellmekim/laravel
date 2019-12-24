@@ -179,6 +179,7 @@ return [
 
         Germey\Geetest\GeetestServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+		//Mews\Captcha\CaptchaServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Geetest' => Germey\Geetest\Geetest::class,
+		//'Captcha' => Mews\Captcha\Facades\Captcha::class,
     ],
 
 ];

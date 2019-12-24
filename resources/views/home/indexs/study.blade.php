@@ -66,7 +66,7 @@
         </div>
         <div class="lesson_box">
             <div class="info">
-                <div class="time_box left"><span>04:20</span></div>
+                <div class="time_box left"></div>
                 <a href="javascript:void(0)" onclick="ReStart('/lesson.aspx?id=fbaf4020-d398-4096-a6a3-15d34c47fcc6&amp;lastid=113d5af2bed9431a8e23d8d448eec82f&amp;typeid=5&amp;mode=')" class="btn sy3">重新开始</a>
                 <a href="javascript:void(0)" onclick="ReturnUrl('/choose2.aspx?id=113d5af2bed9431a8e23d8d448eec82f&amp;typeid=5&amp;mode=')" class="btn sy4">返航</a>
                 
@@ -109,46 +109,8 @@
                         </div>
                     </div>
                 <div class="containerx clearfix"></div>
-                <input type="hidden" id="nowno" name="nowno" value="0270167">
-                <input type="hidden" id="nowpkid" name="nowpkid" value="fbaf4020-d398-4096-a6a3-15d34c47fcc6">
-                <input type="hidden" id="nowlastid" name="nowlastid" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nowtypeid" name="nowtypeid" value="5">
+                <input type="hidden" id="nowpkid" name="nowpkid" value="{{$courseinfo['course_id']}}">
 
-                <input type="hidden" id="nextno1" name="nextno1" value="0270166">
-                <input type="hidden" id="nextpkid1" name="nextpkid1" value="4a188a49-27de-4c7e-a34f-5c07ca09eaed">
-                <input type="hidden" id="nextlastid1" name="nextlastid1" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid1" name="nexttypeid1" value="5">
-
-                <input type="hidden" id="nextno2" name="nextno2" value="0270167">
-                <input type="hidden" id="nextpkid2" name="nextpkid2" value="fbaf4020-d398-4096-a6a3-15d34c47fcc6">
-                <input type="hidden" id="nextlastid2" name="nextlastid2" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid2" name="nexttypeid2" value="5">
-
-                <input type="hidden" id="nextno3" name="nextno3" value="0270168">
-                <input type="hidden" id="nextpkid3" name="nextpkid3" value="91a3fb74-19b6-44d4-9626-6e1d6baef4f3">
-                <input type="hidden" id="nextlastid3" name="nextlastid3" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid3" name="nexttypeid3" value="5">
-
-                <input type="hidden" id="nextno4" name="nextno4" value="0270169">
-                <input type="hidden" id="nextpkid4" name="nextpkid4" value="df7af793-c886-4bee-8b30-76b1db7ff442">
-                <input type="hidden" id="nextlastid4" name="nextlastid4" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid4" name="nexttypeid4" value="5">
-
-                <input type="hidden" id="nextno5" name="nextno5" value="0270170">
-                <input type="hidden" id="nextpkid5" name="nextpkid5" value="b14ab49b-22da-48d2-ba5e-9fcddb75ef4c">
-                <input type="hidden" id="nextlastid5" name="nextlastid5" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid5" name="nexttypeid5" value="5">
-
-                <input type="hidden" id="nextno6" name="nextno6" value="0270171">
-                <input type="hidden" id="nextpkid6" name="nextpkid6" value="75188c67-90e3-4b0c-8634-b57d9843d423">
-                <input type="hidden" id="nextlastid6" name="nextlastid6" value="113d5af2bed9431a8e23d8d448eec82f">
-                <input type="hidden" id="nexttypeid6" name="nexttypeid6" value="5">
-
-                <input type="hidden" id="mode" name="mode" value="">
-                <input type="hidden" id="type" name="type" value="">
-                <input type="hidden" id="sessionxd" name="sessionxd" value="2359">
-                <input type="hidden" id="sessionkey" name="sessionkey" value="ahd5nr5fv23umeihzjgwpr1z">
-                <input type="hidden" id="ifLastUnit" name="ifLastUnit" value="0">
             </div>
         </div>
     </div>
@@ -183,6 +145,7 @@ $('.after_log').hover(function() {
 
 <script type="text/javascript" src="/home/js/exploreindex.js"></script>
 <script type="text/javascript">
+    var submiturl="{{route('submitAchie')}}";
     var cousre=<?php echo  json_encode($info) ?>;
     var courseinfo=<?php echo  json_encode($courseinfo) ?>;
     audiojs.events.ready(function() {

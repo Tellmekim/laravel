@@ -28,5 +28,12 @@ class BaseController extends Controller
 		if($userinfo=session("userinfo")){
 			$this->assign('userinfo',$userinfo);
 		}
+		return $userinfo;
+	}
+	public function is_login_back(){
+		if(!($userinfo=session("userinfo"))){
+			return redirect()->route('index');
+		}
+		return $userinfo;
 	}
 }

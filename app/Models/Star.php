@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Models;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 /**
  * App\Models\Rule
  *
@@ -15,10 +15,11 @@ use Illuminate\Http\Request;
  * @mixin \Eloquent
  */
 
+
 class Star extends Model
 {
 	protected $table = 'star';
-    protected $fillable = ['id', 'star_title', 'rusn_id','img','desc','created_at','updated_at','deleted_at'];
+    protected $fillable = ['id', 'star_title','parent_id','rusn_id','img','desc','created_at','updated_at','deleted_at'];
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
