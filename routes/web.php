@@ -41,7 +41,6 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
         Route::get('rules/status/{status}/{rules}','RulesController@status')->name('rules.status');
         Route::resource('rules','RulesController',['only'=> ['index','create','store','update','edit','destroy'] ]);  //权限
         Route::resource('actions','ActionLogsController',['only'=> ['index','destroy'] ]);  //日志
-      
 
     });
 
@@ -54,17 +53,4 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
 
     
 });
-//Route::namespace('Home')->get('/index','namespace' => 'Home','IndexController@index')->name('index');
-//前端模块
-/*
-Route::group(['namespace' => 'Home','prefix' => 'home'], function (){
-    Route::get('index','IndexController@index')->name('index');  //前端首页
-    Route::get('login','IndexController@login')->name('login');  //前端首页
-    Route::get('experience','IndexController@experience')->name('experience');  //前端首页
-	 
-	/**需要登录认证模块**/
-   /* Route::middleware(['auth:admin','rbac'])->group(function (){
-
-    });*/
-//});
 
