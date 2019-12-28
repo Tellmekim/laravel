@@ -51,7 +51,7 @@ class IndexController extends BaseController
     {
         return view('home.indexs.study');
     }
-	  }
+	  
 	public function bm()
     {
         return view('home.indexs.baoming');
