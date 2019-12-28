@@ -57,8 +57,8 @@ class Member extends Model
 					'updated_at'=>time(),
 				);
 				if($id=$this->insertGetId($adddata)){
-					$userinfo=$this->where('id',$id)->get();
-					session(['userinfo'=>$userinfo]);
+					$userinfo=$this->where('id',$id)->first();
+					session(['userinfo'=>$userinfo->toArray()]);
 					return ['code'=>1,'msg'=>'注册成功'];
 				}else{
 					return ['code'=>-1,'msg'=>'注册失败'];

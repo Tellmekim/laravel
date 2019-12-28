@@ -37,10 +37,9 @@ class LoginController extends BaseController
 		$postdata=$request->input();
 		$reslut=M('Member')->register($postdata);
 		return $reslut;
-		//return view('home.indexs.register');
 	}
 	public function loginOut(){
 		session(['userinfo'=>'']);
-		return ['ocde'=>1,'weizhi'=>M('Common')->get_index(),'msg'=>'退出成功'];
+		return ['code'=>1,'weizhi'=>M('Common')->get_index(),'msg'=>'退出成功'];
 	}
 }

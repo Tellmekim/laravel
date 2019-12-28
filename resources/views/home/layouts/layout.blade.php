@@ -29,7 +29,7 @@
         <p>请用微信扫一扫上面的二维码，分享页面到<br>朋友圈或者分享给朋友即可打卡签到成功</p>
     </div>
 </div>-->
-<div class="zl_box clearfix">
+<!--<div class="zl_box clearfix">
 	<p class="p1 text-center">个人资料</p>
 	<p class="p2 text-center">Personal information</p>
 	<div class="tx_box left"><div><img src="{{loadEdition('/home/image/img30.png')}}" class="img-responsive"></div></div>
@@ -68,7 +68,7 @@
 		<button type="button" class="sub left">确认发布</button>
 	</form>
 	<img src="{{loadEdition('/home/image/img50.png')}}" class="close_zl">
-</div>
+</div>-->
 <script type="text/javascript" src="{{loadEdition('/home/js/select.js')}}"></script>
 <script type="text/javascript">
     $(function(){
@@ -99,10 +99,10 @@
                 <div class="user_menu">
                     <div class="user_tx">
                         <img src="/home/image/img30.png"></div>
-                    <a href="" class="left quit">退出 <br>
+                    <a href="logout" class="left quit">退出 <br>
                         登录</a>
-                    <p style="margin-top:12px;">亲爱的&nbsp;<i>陈老师</i>&nbsp;同学<br>
-                    您的截止学习时间为：2021-06-303</p>
+                    <p style="margin-top:12px;">亲爱的&nbsp;<i>{{$userinfo['userName']}}</i>&nbsp;同学<br>
+                    您的截止学习时间为：{{$userinfo['updated_at']}}</p>
                     <div class="clear"></div>
                     <div class="ship">
                         <a href="javascript:void(0)" class="a1 study_btn" data-id="253870" data-name="17688863703">学习</a>

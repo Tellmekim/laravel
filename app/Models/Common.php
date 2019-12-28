@@ -18,32 +18,32 @@ use Illuminate\Http\Request;
 class Common extends Model
 {
 	protected $indexdata=array(
-		array('x'=>320,'y'=>590,'img'=>'/home/image2/1_1_hide.png','link'=>'','type'=>'img'),
-		array('x'=>315,'y'=>435,'img'=>'/home/image2/1_2_hide.png','link'=>'','type'=>'img'),
-		array('x'=>105,'y'=>315,'img'=>'/home/image2/1_3_hide.png','link'=>'','type'=>'img'),
-		array('x'=>155,'y'=>120,'img'=>'/home/image2/1_4_hide.png','link'=>'','type'=>'img'),
-		array('x'=>490,'y'=>30,'img'=>'/home/image2/2_1_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>320,'y'=>590,'img'=>'/home/image2/1_1_hide.png','link'=>'login','type'=>'img'),
+		array('x'=>315,'y'=>435,'img'=>'/home/image2/1_2_hide.png','link'=>'login','type'=>'img'),
+		array('x'=>105,'y'=>315,'img'=>'/home/image2/1_3_hide.png','link'=>'login','type'=>'img'),
+		array('x'=>155,'y'=>120,'img'=>'/home/image2/1_4_hide.png','link'=>'login','type'=>'img'),
+		array('x'=>490,'y'=>30,'img'=>'/home/image2/2_1_hide_strong.png','link'=>'login','type'=>'img'),
 		
-		array('x'=>550,'y'=>150,'img'=>'/home/image2/2_2_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>720,'y'=>30,'img'=>'/home/image2/2_3_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>920,'y'=>90,'img'=>'/home/image2/2_4_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>550,'y'=>150,'img'=>'/home/image2/2_2_hide_strong.png','link'=>'login','type'=>'img'),
+		array('x'=>720,'y'=>30,'img'=>'/home/image2/2_3_hide_strong.png','link'=>'login','type'=>'img'),
+		array('x'=>920,'y'=>90,'img'=>'/home/image2/2_4_hide_strong.png','link'=>'login','type'=>'img'),
 		
-		array('x'=>1200,'y'=>250,'img'=>'/home/image2/3_1_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>1100,'y'=>570,'img'=>'/home/image2/3_2_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>1200,'y'=>250,'img'=>'/home/image2/3_1_hide_strong.png','link'=>'login','type'=>'img'),
+		array('x'=>1100,'y'=>570,'img'=>'/home/image2/3_2_hide_strong.png','link'=>'login','type'=>'img'),
 		array('x'=>80,'y'=>30,'ywidth'=>150,'yheigth'=>80,'img'=>'/home/image2/btn_login.png','link'=>'login','type'=>'img'),
 		array('x'=>320,'y'=>30,'ywidth'=>150,'yheigth'=>80,'img'=>'/home/image2/btn_reg.png','link'=>'register','type'=>'img'),
 	);
 	protected $userinfoindexdata=array(
-		array('x'=>320,'y'=>590,'img'=>'/home/image2/1_1_hide.png','link'=>'','type'=>'img'),
-		array('x'=>315,'y'=>435,'img'=>'/home/image2/1_2_hide.png','link'=>'','type'=>'img'),
-		array('x'=>105,'y'=>325,'img'=>'/home/image2/1_3_hide.png','link'=>'','type'=>'img'),
-		array('x'=>155,'y'=>150,'img'=>'/home/image2/1_4_hide.png','link'=>'','type'=>'img'),
-		array('x'=>490,'y'=>30,'img'=>'/home/image2/2_1_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>550,'y'=>150,'img'=>'/home/image2/2_2_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>720,'y'=>30,'img'=>'/home/image2/2_3_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>920,'y'=>90,'img'=>'/home/image2/2_4_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>1200,'y'=>250,'img'=>'/home/image2/3_1_hide_strong.png','link'=>'','type'=>'img'),
-		array('x'=>1100,'y'=>570,'img'=>'/home/image2/3_2_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>320,'y'=>590,'img'=>'/home/image2/1_1_hide.png','link'=>'starList?id=1','type'=>'img'),
+		//array('x'=>315,'y'=>435,'img'=>'/home/image2/1_2_hide.png','link'=>'','type'=>'img'),
+		//array('x'=>105,'y'=>325,'img'=>'/home/image2/1_3_hide.png','link'=>'','type'=>'img'),
+		array('x'=>155,'y'=>150,'img'=>'/home/image2/1_4_hide.png','link'=>'starList?id=2','type'=>'img'),
+		//array('x'=>490,'y'=>30,'img'=>'/home/image2/2_1_hide_strong.png','link'=>'','type'=>'img'),
+		//array('x'=>550,'y'=>150,'img'=>'/home/image2/2_2_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>720,'y'=>30,'img'=>'/home/image2/2_3_hide_strong.png','link'=>'starList?id=3','type'=>'img'),
+		//array('x'=>920,'y'=>90,'img'=>'/home/image2/2_4_hide_strong.png','link'=>'','type'=>'img'),
+		array('x'=>1200,'y'=>250,'img'=>'/home/image2/3_1_hide_strong.png','link'=>'starList?id=4','type'=>'img'),
+		//array('x'=>1100,'y'=>570,'img'=>'/home/image2/3_2_hide_strong.png','link'=>'','type'=>'img'),
 		array('x'=>25,'y'=>60,'ywidth'=>100,'yheigth'=>100,'img'=>'/home/image2/imgHead1.png','link'=>'','type'=>'img'),
 		array('x'=>225,'y'=>10,'img'=>'/home/image2/userinfo_exit2.png','link'=>'click:ajax:api/loginOut','type'=>'img'), //退出
 		//array('x'=>1450,'y'=>180,'img'=>'/home/image2/myFriendBtn.png','link'=>'','type'=>'img'), //好友
@@ -65,7 +65,6 @@ class Common extends Model
 		}
 	}
 	function get_index($user=''){
-		//var_dump($userinfo); die;
 		if(!empty($user)){
 			$res=M('member')->where(['id'=>$user['id']])->first();
 			$userinfo=$res->toArray();
@@ -75,6 +74,7 @@ class Common extends Model
 			}else{
 				$adddata=array(
 					'userId'=>$userinfo['id'],
+					'subject_num'=>0,
 				);
 				M('member_info')->insertGetId($adddata);
 				$subject_num=0;
