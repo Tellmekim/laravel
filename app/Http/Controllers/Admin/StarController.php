@@ -21,30 +21,11 @@ class StarController extends BaseController
      * @param RushThroughController 
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(Star $Star)
+    public function index(RoleRequest $request)
     {
-        
-        $roles = $this->Star->where('parent_id','0')->where('rusn_id','1')->paginate(10);
+        dd($request);
+            $roles = $this->Star->where('parent_id','0')->where('rusn_id','1')->paginate(10);
         return $this->view(null,compact('roles'));
-    }
-
-    public function grade(Star $Star){
-        $roles = $this->Star->where('parent_id','0')->where('rusn_id','2')->paginate(10);
-        return $this->view(null,compact('roles'));
-    }
-
-    public function speech(Star $Star){
-        $roles = $this->Star->where('parent_id','0')->where('rusn_id','3')->paginate(10);
-        return $this->view(null,compact('roles'));
-    }
-
-    /**
-     * 
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function create()
-    {
-       // return $this->view();
     }
 
     /**
@@ -53,24 +34,14 @@ class StarController extends BaseController
      * @param RushThroughController $Rush
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(RoleRequest $request, Role $role)
+    public function store(RoleRequest $request, star $star)
     {
-        $role->fill($request->all());
-        $role->save();
+        $star->fill($request->all());
+        $star->save();
 
         flash('添加关卡成功')->success()->important();
 
         return redirect()->route('star.create');
-    }
-
-
-    /**
-     * @param  RushThroughController $Rush
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function edit(Role $role)
-    {
-        return $this->view('edit',compact('role'));
     }
 
     /**

@@ -46,11 +46,26 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin'], function (){
     });
 
        Route::resource('rush-through','RushThroughController',['only' => ['index', 'create', ' store', 'update', 'edit']]);//闯关列表
-       Route::resource('star','StarController',['only' => ['index', 'create', 'store', 'update', 'edit']]);//星球课程
+       Route::resource('star','StarController',['only' => ['index', 'store', 'update']]);//星球课程
        Route::get('status','StarController@status')->name('star.status');//课程是否启动
        Route::get('childCourse','StarController@childCourse')->name('star.childCourse');//子课程
-       Route::get('grade','StarController@grade')->name('star.grade');//年级课程
-       Route::get('speech','StarController@speech')->name('star.speech');//词类课程
+       Route::get('aoYouTaiKong','StarController@aoYouTaiKong')->name('star.aoYouTaiKong');//遨游太空
+       Route::get('xuanZhuanFeiChe','StarController@xuanZhuanFeiChe')->name('star.xuanZhuanFeiChe');//旋转飞车
+       Route::get('moFaChengBao','StarController@moFaChengBao')->name('star.moFaChengBao');//魔法城堡
+       Route::get('xuanZhuanMuMa','StarController@xuanZhuanMuMa')->name('star.xuanZhuanMuMa');//旋转木马
+        Route::get('ciJiHaiDaoChuan','StarController@ciJiHaiDaoChuan')->name('star.ciJiHaiDaoChuan');//刺激海盗船
+        Route::get('bingShangBaoLei','StarController@bingShangBaoLei')->name('star.bingShangBaoLei');//冰上芭蕾
+        Route::get('kongZhongDanChe','StarController@kongZhongDanChe')->name('star.kongZhongDanChe');//空中单车
+        Route::get('taoQiHuoChe','StarController@taoQiHuoChe')->name('star.taoQiHuoChe');//淘气火车
+        Route::get('shenMiMiGong','StarController@shenMiMiGong')->name('star.shenMiMiGong');//神秘迷宫
+        Route::get('fengKuangDaBaiChui','StarController@fengKuangDaBaiChui')->name('star.fengKuangDaBaiChui');//疯狂大摆锤
+        Route::get('wanQuGuoShanChe','StarController@wanQuGuoShanChe')->name('star.wanQuGuoShanChe');//玩趣过山车
+        Route::get('xuanZhuanMoTianLun','StarController@xuanZhuanMoTianLun')->name('star.xuanZhuanMoTianLun');//旋转摩天轮
+
+       Route::resource('set','SetController',['only'=>['index']]);
+
+
+
 
     
 });
